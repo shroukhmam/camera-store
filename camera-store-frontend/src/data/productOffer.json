@@ -1,0 +1,230 @@
+{
+  "products": [
+    {
+      "id": 28003,
+      "name": "CANON RF 24-105MM F2.8L IS USM Z",
+      "category": ["Lens", "Canon", "RF & RF-S"],
+      "stock": "In stock",
+      "original_price": "177,000 EGP",
+      "sale_price": "160,000 EGP",
+      "discount": "-10%",
+      "sku": "02413",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/06/rf-24-105mm-f2-600x600.webp"
+    },
+    {
+      "id": 11694,
+      "name": "Canon EOS R5 Mirrorless Camera (Body Only)",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "150,000 EGP",
+      "sale_price": "130,000 EGP",
+      "discount": "-13%",
+      "sku": "01523",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/07/Canon-EOS-R5-Mirrorless-Camera-Front-.webp"
+    },
+    {
+      "id": 15868,
+      "name": "Canon EOS R6 Mark II Mirrorless Camera",
+      "category": ["Canon"],
+      "stock": "In stock",
+      "price_range": {
+        "min": "99,000 EGP",
+        "max": "123,000 EGP"
+      },
+      "discount": "-5%",
+      "sku": "01642",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-EOS-R6-Mark-II-Mirrorless-Camera-Front-.webp"
+    },
+    {
+      "id": 15440,
+      "name": "Canon RF 70-200mm f/2.8 L IS USM Lens",
+      "category": ["Lens", "Canon", "RF & RF-S"],
+      "stock": "In stock",
+      "original_price": "125,000 EGP",
+      "sale_price": "120,000 EGP",
+      "discount": "-4%",
+      "sku": "02307",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/06/Canon-RF-70-200mm-f-2.8-L-IS-USM-Lens-3.webp"
+    },
+    {
+      "id": 14667,
+      "name": "Canon RF 15-35mm f/2.8 L IS USM Lens",
+      "category": ["Lens", "Canon", "RF & RF-S"],
+      "stock": "In stock",
+      "original_price": "120,000 EGP",
+      "sale_price": "115,000 EGP",
+      "discount": "-4%",
+      "sku": "02295",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-15-35mm-f-2.8-L-IS-USM-Lens-2.webp"
+    },
+    {
+      "id": 11756,
+      "name": "Canon EOS 90D DSLR Camera",
+      "category": ["DSLR", "Canon", "Camera"],
+      "stock": "In stock",
+      "price_range": {
+        "min": "72,000 EGP",
+        "max": "99,900 EGP"
+      },
+      "discount": "-10%",
+      "sku": "01473",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/08/Canon-EOS-90D-DSLR-Camera-Front-.webp"
+    },
+    {
+      "id": 30685,
+      "name": "Canon EOS R6 Mirrorless Camera",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "100,000 EGP",
+      "sale_price": "90,000 EGP",
+      "discount": "-10%",
+      "sku": "01494",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/12/canon_eos_r6_mirrorless_digital_1594281159_1547010-removebg-preview.png"
+    },
+    {
+      "id": 18572,
+      "name": "Sony FE 50mm f/1.2 GM Lens (Sony E)",
+      "category": ["Lens", "Sony"],
+      "stock": "Out of stock",
+      "original_price": "120,000 EGP",
+      "sale_price": "80,000 EGP",
+      "discount": "-33%",
+      "sku": "02377",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/08/1615895153_1630079.jpg"
+    },
+    {
+      "id": 16228,
+      "name": "Canon EOS R8 Mirrorless Camera (Body Only)",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "In stock",
+      "price_range": {
+        "min": "60,000 EGP",
+        "max": "80,000 EGP"
+      },
+      "discount": "-6%",
+      "sku": "01665",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-EOS-R8-Mirrorless-Camera-Front-.webp"
+    },
+    {
+      "id": 16470,
+      "name": "Canon RF 100mm f/2.8 L Macro IS USM Lens",
+      "category": ["Lens", "Canon", "RF & RF-S"],
+      "stock": "In stock",
+      "original_price": "79,000 EGP",
+      "sale_price": "75,000 EGP",
+      "discount": "-5%",
+      "sku": "02354",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-RF-100mm-f-2.8-L-Macro-IS-USM-Lens-1.webp"
+    },
+    {
+      "id": 6879,
+      "name": "Canon EOS 6D MARK II BODY",
+      "category": ["DSLR", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "75,000 EGP",
+      "sale_price": "64,000 EGP",
+      "discount": "-15%",
+      "sku": "01394",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/03/Canon-EOS-6D-Mark-II-DSLR-Camera-Body-Only-4.png"
+    },
+    {
+      "id": 14615,
+      "name": "Canon RF 14-35mm f/4 L IS USM Lens",
+      "category": ["Lens", "Canon", "RF & RF-S"],
+      "stock": "In stock",
+      "original_price": "63,000 EGP",
+      "sale_price": "60,000 EGP",
+      "discount": "-5%",
+      "sku": "02356",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-14-35mm-f-4-L-IS-USM-Lens-2.webp"
+    },
+    {
+      "id": 14217,
+      "name": "Canon EOS R7 Mirrorless Camera",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "65,000 EGP",
+      "sale_price": "57,500 EGP",
+      "discount": "-12%",
+      "sku": "01623",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/10/Canon-EOS-R7-Mirrorless-Camera-with-18-150mm-Lens-Official-Warranty-Front-.webp"
+    },
+    {
+      "id": 28056,
+      "name": "DJI RS 4 Pro Combo Gimbal Stabilizer",
+      "category": ["stabilizer", "DJI"],
+      "stock": "Out of stock",
+      "original_price": "58,000 EGP",
+      "sale_price": "55,000 EGP",
+      "discount": "-5%",
+      "sku": "01701",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/07/dji-rs4-pro-combo-4.webp"
+    },
+    {
+      "id": 30690,
+      "name": "Canon EOS 80D DSLR Camera (Body Only)",
+      "category": ["DSLR", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "75,000 EGP",
+      "sale_price": "50,000 EGP",
+      "discount": "-33%",
+      "sku": "01239",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/12/canon_1263c004_eos_80d_dslr_camera_1455749513_1225875-removebg-preview.png"
+    },
+    {
+      "id": 14579,
+      "name": "Canon EOS R10 Mirrorless Camera with 18-45mm Lens",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "Out of stock",
+      "original_price": "59,000 EGP",
+      "sale_price": "49,000 EGP",
+      "discount": "-17%",
+      "sku": "01647",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon_R10_11.webp"
+    },
+    {
+      "id": 28818,
+      "name": "DJI RS 4 Pro Gimbal Stabilizer",
+      "category": ["stabilizer", "DJI"],
+      "stock": "Out of stock",
+      "original_price": "47,000 EGP",
+      "sale_price": "45,000 EGP",
+      "discount": "-4%",
+      "sku": "01700",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/10/1712652658_IMG_2212597-removebg-preview.png"
+    },
+    {
+      "id": 28532,
+      "name": "Canon EOS R50 Content Creator Kit",
+      "category": ["Canon"],
+      "stock": "In stock",
+      "original_price": "50,000 EGP",
+      "sale_price": "44,000 EGP",
+      "discount": "-12%",
+      "sku": "01664-1",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/09/1683762334_1766852-removebg-preview.png"
+    },
+    {
+      "id": 26369,
+      "name": "DJI RS 3 Pro Combo",
+      "category": ["stabilizer", "DJI"],
+      "stock": "In stock",
+      "original_price": "53,000 EGP",
+      "sale_price": "41,000 EGP",
+      "discount": "-23%",
+      "sku": "01653",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/02/DJI-RS-3-Pro-Combo-1.webp"
+    },
+    {
+      "id": 16237,
+      "name": "Canon EOS R50 Mirrorless Camera with 18-45mm Lens",
+      "category": ["Mirrorless", "Canon", "Camera"],
+      "stock": "In stock",
+      "original_price": "40,000 EGP",
+      "sale_price": "37,500 EGP",
+      "discount": "-6%",
+      "sku": "01664",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/09/Canon-EOS-R50-Mirrorless-Camera-with-18-45mm-Lens-Front-.webp"
+    }
+  ]
+}
