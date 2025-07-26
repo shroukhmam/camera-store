@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "7RYMS",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/7ryms-1.png",
+    "link": "https://camerashop.com.eg/brand/7ryms/"
+  },
+  {
+    "id": 2,
+    "name": "Atomos",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/atomos.png",
+    "link": "https://camerashop.com.eg/brand/atomos/"
+  },
+  {
+    "id": 3,
+    "name": "B+W",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/bw-1.png",
+    "link": "https://camerashop.com.eg/brand/bw/"
+  },
+  {
+    "id": 4,
+    "name": "BlackMagic",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/blackmagic-1.png",
+    "link": "https://camerashop.com.eg/brand/blackmagic/"
+  },
+  {
+    "id": 5,
+    "name": "Boya",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/boya-1.png",
+    "link": "https://camerashop.com.eg/brand/boya/"
+  },
+  {
+    "id": 6,
+    "name": "Brother",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/brother-1.png",
+    "link": "https://camerashop.com.eg/brand/brother/"
+  },
+  {
+    "id": 7,
+    "name": "Canon",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/canon-1.png",
+    "link": "https://camerashop.com.eg/brand/canon/"
+  },
+  {
+    "id": 8,
+    "name": "COLBOR",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/colbor-1.png",
+    "link": "https://camerashop.com.eg/brand/colbor/"
+  },
+  {
+    "id": 9,
+    "name": "Comica",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/comica-1.png",
+    "link": "https://camerashop.com.eg/brand/comica/"
+  },
+  {
+    "id": 10,
+    "name": "DJI",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/dji.png",
+    "link": "https://camerashop.com.eg/brand/dji/"
+  },
+  {
+    "id": 11,
+    "name": "Exascend",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/exascend.png",
+    "link": "https://camerashop.com.eg/brand/exascend/"
+  },
+  {
+    "id": 12,
+    "name": "FalconEyes",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/falconeyes-1.png",
+    "link": "https://camerashop.com.eg/brand/falconeyes/"
+  },
+  {
+    "id": 13,
+    "name": "FeelWorld",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/feelworld-1.png",
+    "link": "https://camerashop.com.eg/brand/feelworld/"
+  },
+  {
+    "id": 14,
+    "name": "FeiyuTech",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/feiyutech.png",
+    "link": "https://camerashop.com.eg/brand/feiyutech/"
+  },
+  {
+    "id": 15,
+    "name": "FUJIFILM",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/fujifilm.png",
+    "link": "https://camerashop.com.eg/brand/fujifilm/"
+  },
+  {
+    "id": 16,
+    "name": "GODOX",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/godox-1.png",
+    "link": "https://camerashop.com.eg/brand/godox/"
+  },
+  {
+    "id": 17,
+    "name": "GoPro",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/GoPro-1.png",
+    "link": "https://camerashop.com.eg/brand/gopro/"
+  },
+  {
+    "id": 18,
+    "name": "HeroView",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/heroview-1.png",
+    "link": "https://camerashop.com.eg/brand/heroview/"
+  },
+  {
+    "id": 19,
+    "name": "Hohem",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/hohem-1.png",
+    "link": "https://camerashop.com.eg/brand/hohem/"
+  },
+  {
+    "id": 20,
+    "name": "HollyLand",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/hollyland-1.png",
+    "link": "https://camerashop.com.eg/brand/hollyland/"
+  },
+  {
+    "id": 21,
+    "name": "insta360",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/insta360.png",
+    "link": "https://camerashop.com.eg/brand/insta360/"
+  },
+  {
+    "id": 22,
+    "name": "Jmary",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/jmary-1.png",
+    "link": "https://camerashop.com.eg/brand/jmary/"
+  },
+  {
+    "id": 23,
+    "name": "JOBY",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/joby.png",
+    "link": "https://camerashop.com.eg/brand/joby/"
+  },
+  {
+    "id": 24,
+    "name": "LensGo",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/lensgo-1.png",
+    "link": "https://camerashop.com.eg/brand/lensgo/"
+  },
+  {
+    "id": 25,
+    "name": "Lexar",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/lexar-1.png",
+    "link": "https://camerashop.com.eg/brand/lexar/"
+  },
+  {
+    "id": 26,
+    "name": "LOWEPRO",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/lowepro.png",
+    "link": "https://camerashop.com.eg/brand/lowepro/"
+  },
+  {
+    "id": 27,
+    "name": "MAMEN",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/mamen.png",
+    "link": "https://camerashop.com.eg/brand/mamen/"
+  },
+  {
+    "id": 28,
+    "name": "MANFROTTO",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/manfrotto-1.png",
+    "link": "https://camerashop.com.eg/brand/manfrotto/"
+  },
+  {
+    "id": 29,
+    "name": "Meco",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/meco-1.png",
+    "link": "https://camerashop.com.eg/brand/meco/"
+  },
+  {
+    "id": 30,
+    "name": "Meike",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/meike-1.png",
+    "link": "https://camerashop.com.eg/brand/meike/"
+  },
+  {
+    "id": 31,
+    "name": "Miliboo",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/miliboo-1.png",
+    "link": "https://camerashop.com.eg/brand/miliboo/"
+  },
+  {
+    "id": 32,
+    "name": "NanLite",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/nanlite-1.png",
+    "link": "https://camerashop.com.eg/brand/nanlite/"
+  },
+  {
+    "id": 33,
+    "name": "Nest",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/nest-1.png",
+    "link": "https://camerashop.com.eg/brand/nest/"
+  },
+  {
+    "id": 34,
+    "name": "NiceFoto",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/nicefoto-1.png",
+    "link": "https://camerashop.com.eg/brand/nicefoto/"
+  },
+  {
+    "id": 35,
+    "name": "Nikon",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/nikon-1.png",
+    "link": "https://camerashop.com.eg/brand/nikon/"
+  },
+  {
+    "id": 36,
+    "name": "Pixel",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/pixel-1.png",
+    "link": "https://camerashop.com.eg/brand/pixel/"
+  },
+  {
+    "id": 37,
+    "name": "RODE",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/rode-1.png",
+    "link": "https://camerashop.com.eg/brand/rode/"
+  },
+  {
+    "id": 38,
+    "name": "Rollei",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/rollie-1.png",
+    "link": "https://camerashop.com.eg/brand/rollei/"
+  },
+  {
+    "id": 39,
+    "name": "Samson",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/samson-1.png",
+    "link": "https://camerashop.com.eg/brand/samson/"
+  },
+  {
+    "id": 40,
+    "name": "SanDisk",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sandisk-1.png",
+    "link": "https://camerashop.com.eg/brand/sandisk/"
+  },
+  {
+    "id": 41,
+    "name": "Saramonic",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/saramonic-1.png",
+    "link": "https://camerashop.com.eg/brand/saramonic/"
+  },
+  {
+    "id": 42,
+    "name": "Sekonic",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sekonic.png",
+    "link": "https://camerashop.com.eg/brand/sekonic/"
+  },
+  {
+    "id": 43,
+    "name": "Sennheiser",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sennheiser-1.png",
+    "link": "https://camerashop.com.eg/brand/sennheiser/"
+  },
+  {
+    "id": 44,
+    "name": "SEVENORK",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sevenork.png",
+    "link": "https://camerashop.com.eg/brand/sevenork/"
+  },
+  {
+    "id": 45,
+    "name": "SIGMA",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sigma-1.png",
+    "link": "https://camerashop.com.eg/brand/sigma/"
+  },
+  {
+    "id": 46,
+    "name": "Sony",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/sony-1.png",
+    "link": "https://camerashop.com.eg/brand/sony/"
+  },
+  {
+    "id": 47,
+    "name": "SWIT",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/swit.png",
+    "link": "https://camerashop.com.eg/brand/swit/"
+  },
+  {
+    "id": 48,
+    "name": "Synco",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/synco.png",
+    "link": "https://camerashop.com.eg/brand/synco/"
+  },
+  {
+    "id": 49,
+    "name": "TAKSTAR",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/takstar.png",
+    "link": "https://camerashop.com.eg/brand/takstar/"
+  },
+  {
+    "id": 50,
+    "name": "tamron",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/04/tamron.png",
+    "link": "https://camerashop.com.eg/brand/tamron/"
+  },
+  {
+    "id": 51,
+    "name": "Tether",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/tether-tools-1.png",
+    "link": "https://camerashop.com.eg/brand/tether/"
+  },
+  {
+    "id": 52,
+    "name": "TILTA",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/tilta.png",
+    "link": "https://camerashop.com.eg/brand/tilta/"
+  },
+  {
+    "id": 53,
+    "name": "Tolifo",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/tolifo-1.png",
+    "link": "https://camerashop.com.eg/brand/tolifo/"
+  },
+  {
+    "id": 54,
+    "name": "Transcend",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/transcend-1.png",
+    "link": "https://camerashop.com.eg/brand/transcend/"
+  },
+  {
+    "id": 55,
+    "name": "Ulanzi",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/ulanzi.png",
+    "link": "https://camerashop.com.eg/brand/ulanzi/"
+  },
+  {
+    "id": 56,
+    "name": "Velbon",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/velbon-1.png",
+    "link": "https://camerashop.com.eg/brand/velbon/"
+  },
+  {
+    "id": 57,
+    "name": "Viltrox",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/viltrox-1.png",
+    "link": "https://camerashop.com.eg/brand/viltrox/"
+  },
+  {
+    "id": 58,
+    "name": "WEIFENG",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/weifeng-1.png",
+    "link": "https://camerashop.com.eg/brand/weifeng/"
+  },
+  {
+    "id": 59,
+    "name": "Yongnuo",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/yongnuo-1.png",
+    "link": "https://camerashop.com.eg/brand/yongnuo/"
+  },
+  {
+    "id": 60,
+    "name": "YUNTENG",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/yunteng-1.png",
+    "link": "https://camerashop.com.eg/brand/yunteng/"
+  },
+  {
+    "id": 61,
+    "name": "ZGCINE",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/zgcine-1.png",
+    "link": "https://camerashop.com.eg/brand/zgcine/"
+  },
+  {
+    "id": 62,
+    "name": "Zhiyun",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/zhiyun-1.png",
+    "link": "https://camerashop.com.eg/brand/zhiyun/"
+  },
+  {
+    "id": 63,
+    "name": "ZOOM",
+    "img": "https://camerashop.com.eg/wp-content/uploads/2025/02/zoom-1.png",
+    "link": "https://camerashop.com.eg/brand/zoom/"
+  }
+]
