@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCamera, FaSearch } from "react-icons/fa";
+import { FaCamera, FaSearch, FaUser, FaCog } from "react-icons/fa";
 import SelectCategory from "./SelectCategory";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,17 +21,29 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-white shadow relative z-0 flex flex-col md:flex-row justify-between items-center px-4 py-2 gap-3 md:gap-0 overflow-visible">
-      <div className="hidden md:block w-[60px]"></div>
+    <div className="w-full bg-white shadow relative z-0 flex flex-col md:flex-row justify-between items-center px-4 py-3 md:gap-5 gap-3">
+      {/* Logo Section with Icons */}
+      <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-normal">
+        {/* Settings Icon - Left of Logo */}
+        <button className="text-gray-600 hover:text-orange-600 transition-colors">
+          <FaCog className="text-xl" />
+        </button>
 
-      <div className="flex-1 flex flex-col md:flex-row items-center gap-3 md:gap-4 w-full overflow-visible">
+        {/* Logo */}
         <div className="flex items-center gap-2 text-orange-600 text-2xl font-bold whitespace-nowrap">
           <FaCamera className="text-3xl" />
           <h1>camera shop</h1>
         </div>
 
-        {/* Search Input + Select + Button */}
-        <div className="flex items-center border border-orange-300 rounded-full w-full max-w-2xl overflow-visible text-sm relative z-50 px-2 py-1 bg-white">
+        {/* User Icon - Right of Logo */}
+        <button className="text-gray-600 hover:text-orange-600 transition-colors">
+          <FaUser className="text-xl" />
+        </button>
+      </div>
+
+      {/* Search Section */}
+      <div className="flex-1 flex items-center w-full md:max-w-2xl">
+        <div className="flex items-center border border-orange-300 rounded-full w-full overflow-visible text-sm px-2 py-1 bg-white">
           <input
             type="text"
             placeholder="Search for products"
@@ -40,7 +52,7 @@ const Navbar = () => {
             className="flex-1 px-3 py-2 outline-none text-sm text-gray-700 bg-transparent"
           />
 
-          <div className="w-[180px]">
+          <div className="w-[150px] md:w-[180px]">
             <SelectCategory
               selected={selectedCategory}
               setSelected={setSelectedCategory}
@@ -56,16 +68,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-3 text-sm">
-        <div className="text-center md:text-left">
-          <p className="text-gray-500">Your Support</p>
-          <p className="text-orange-600 font-semibold text-sm">+20023924362</p>
-        </div>
-        <div className="text-center md:text-left">
-          <p className="text-gray-500">Worldwide</p>
-          <p className="text-orange-600 underline">Shipping</p>
-        </div>
-      </div>
+      {/* Empty div for spacing on desktop */}
+      <div className="hidden md:block w-[60px]"></div>
 
       <ToastContainer position="top-center" />
     </div>

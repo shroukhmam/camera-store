@@ -34,7 +34,6 @@ const SelectCategory = ({ selected, setSelected }) => {
 
   const getDropdownList = () => {
     const list = [...rawCategories];
-    // لو مختارة حاجة غير SELECT CATEGORY، ضيفها أول عنصر
     if (selected && selected !== "SELECT CATEGORY") {
       return ["SELECT CATEGORY", ...list];
     }
@@ -51,9 +50,9 @@ const SelectCategory = ({ selected, setSelected }) => {
       </button>
 
       {open && (
-        <ul className="absolute left-0 right-0 bg-white border border-orange-300 rounded mt-1 max-h-60 overflow-y-scroll w-full shadow-lg z-[999]">
+        <ul className="absolute left-0 right-0 bg-white border border-orange-300 rounded mt-1 max-h-60 overflow-y-auto w-full shadow-lg z-[999] text-sm">
           {getDropdownList()
-            .filter((cat) => !(selected === "SELECT CATEGORY" && cat === "SELECT CATEGORY")) // هنا الصح
+            .filter((cat) => !(selected === "SELECT CATEGORY" && cat === "SELECT CATEGORY"))
             .map((cat, idx) => (
               <li
                 key={idx}
