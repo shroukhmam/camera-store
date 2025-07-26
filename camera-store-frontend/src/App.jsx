@@ -29,6 +29,9 @@ function App() {
                         <SubNavbar />
 
                         <Routes>
+                            <Route path="/login" element={<AccountPage />} />
+                            <Route path="/forget-password" element={<ForgetPassword />} />
+
                             <Route path="/" element={<Home />} />
                             <Route path="/product/:id" element={<ProductPage />} />
                         </Routes>
