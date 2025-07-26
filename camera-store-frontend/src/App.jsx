@@ -1,16 +1,14 @@
-// src/App.jsx
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from "./Pages/Login.jsx";
+import Navbar from "./components/Navbar";
+import SubNavbar from "./components/SubNavbar";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Login />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <div className="App">
+      <Navbar />
+      <SubNavbar />
+      {/* باقي الموقع هنا */}
+    </div>
+  );
 }
 
 export default App;
