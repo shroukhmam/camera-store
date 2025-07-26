@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "name": "Camera",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/camera-icon-2.png",
+    "brands": [
+      {
+        "id": 1,
+        "name": "Canon",
+        "types": [
+          {
+            "id": 1,
+            "name": "DSLR"
+          },
+          {
+            "id": 2,
+            "name": "Mirrorless"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Sony",
+        "types": [
+          {
+            "id": 3,
+            "name": "Mirrorless"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "GoPro",
+        "types": [
+          {
+            "id": 4,
+            "name": "Action"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "DJI",
+        "types": [
+          {
+            "id": 5,
+            "name": "Action"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Lens",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/lens-icon.png",
+    "brands": [
+      {
+        "id": 5,
+        "name": "Canon",
+        "types": []
+      },
+      {
+        "id": 6,
+        "name": "Sony",
+        "types": []
+      },
+      {
+        "id": 7,
+        "name": "Sigma",
+        "types": []
+      },
+      {
+        "id": 8,
+        "name": "Tamron",
+        "types": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "professional Video Camera",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/pro-video-icon-1-150x150.png",
+    "brands": [
+      {
+        "id": 9,
+        "name": "Canon",
+        "types": []
+      },
+      {
+        "id": 10,
+        "name": "BlackMagic",
+        "types": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Printer",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/printer-icon-150x150.png",
+    "brands": [
+      {
+        "id": 11,
+        "name": "Canon",
+        "types": []
+      },
+      {
+        "id": 12,
+        "name": "Brother",
+        "types": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Lights",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/light-icon-150x150.png",
+    "brands": [
+      {
+        "id": 13,
+        "name": "Tolifo",
+        "types": [
+          {
+            "id": 6,
+            "name": "Compact"
+          },
+          {
+            "id": 7,
+            "name": "Tube"
+          },
+          {
+            "id": 8,
+            "name": "RingLight"
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Falcon",
+        "types": [
+          {
+            "id": 9,
+            "name": "Tube"
+          },
+          {
+            "id": 10,
+            "name": "Panel"
+          },
+          {
+            "id": 11,
+            "name": "RingLight"
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Nanlite",
+        "types": [
+          {
+            "id": 12,
+            "name": "Heads"
+          },
+          {
+            "id": 13,
+            "name": "Tube"
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Godox",
+        "types": [
+          {
+            "id": 14,
+            "name": "Heads"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Memory",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/memory-card-icon.png",
+    "brands": [
+      {
+        "id": 17,
+        "name": "SanDisk",
+        "types": [
+          {
+            "id": 15,
+            "name": "SD"
+          },
+          {
+            "id": 16,
+            "name": "CF Express"
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Sony",
+        "types": [
+          {
+            "id": 17,
+            "name": "SD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Microphone",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/mic-icon-1-150x150.png",
+    "brands": [
+      {
+        "id": 19,
+        "name": "DJI",
+        "types": [
+          {
+            "id": 18,
+            "name": "Wireless"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "stabilizer",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/12/stabilizer-icon-150x150.png",
+    "brands": [
+      {
+        "id": 20,
+        "name": "DJI",
+        "types": []
+      },
+      {
+        "id": 21,
+        "name": "hohem",
+        "types": []
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Video Mixers",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/video-mixer-icon-150x150.png"
+  },
+  {
+    "id": 10,
+    "name": "Accessories",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/accessories-icon-150x150.png",
+    "types": [
+      {
+        "id": 101,
+        "name": "Bag"
+      },
+      {
+        "id": 102,
+        "name": "Screen"
+      },
+      {
+        "id": 103,
+        "name": "Tripod"
+      },
+      {
+        "id": 104,
+        "name": "Battery"
+      }
+    ],
+    "brands": [ {
+      "id": 1,
+      "name": "Canon",
+      "types": [
+        {
+          "id": 1,
+          "name": "DSLR"
+        },
+        {
+          "id": 2,
+          "name": "Mirrorless"
+        }
+      ]
+    }]
+  }
+]
