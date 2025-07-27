@@ -28,14 +28,17 @@ const CategoryCarousel = () => {
                     breakpoints={{
                         320: {
                             slidesPerView: 2,
+                            slidesPerGroup: 2,
                             spaceBetween: 10
                         },
                         768: {
                             slidesPerView: 4,
+                            slidesPerGroup: 4,
                             spaceBetween: 15
                         },
                         1024: {
                             slidesPerView: 7,
+                            slidesPerGroup: 7,
                             spaceBetween: 20
                         }
                     }}
@@ -44,27 +47,24 @@ const CategoryCarousel = () => {
                         <SwiperSlide key={category.id}>
                             <div className="category-grid-item wd-cat cat-design-default wd-with-subcat color-scheme-light product-category product">
                                 <div className="wd-cat-inner wrapp-category">
-                                    <div className="wd-cat-thumb category-image-wrapp">
-                                        <a className="wd-cat-image category-image" href={`/product-category/${category.name.toLowerCase()}`} aria-label="Category image">
-                                            <img
-                                                loading="lazy"
-                                                decoding="async"
-                                                width="150"
-                                                height="150"
-                                                src={category.image}
-                                                className="attachment-thumbnail size-thumbnail"
-                                                alt={category.name}
-                                            />
-                                        </a>
-                                    </div>
-                                    <div className="wd-cat-content hover-mask">
-                                        <h3 className="wd-entities-title">{category.name}</h3>
-                                        <div className="wd-cat-count more-products">
-                                            <a href={`/product-category/${category.name.toLowerCase()}`}>
-                                                {category.product_count} products
-                                            </a>
+                                    <div
+                                        className="wd-cat-thumb category-image-wrapp relative w-[200px] h-[160px] bg-cover bg-center rounded-lg overflow-hidden"
+                                        style={{ backgroundImage: `url(${category.image})` }}
+                                    >
+                                        {/* تغطية + توسيط كامل */}
+                                        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                                            <div className="text-white text-center">
+                                                <h3 className="text-base font-bold mb-1">{category.name}</h3>
+                                                <a
+                                                    href={`/product-category/${category.name.toLowerCase()}`}
+                                                    className="text-sm underline"
+                                                >
+                                                    {category.product_count} products
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <a
                                         className="wd-fill category-link"
                                         href={`/product-category/${category.name.toLowerCase()}`}
@@ -72,6 +72,7 @@ const CategoryCarousel = () => {
                                     ></a>
                                 </div>
                             </div>
+
                         </SwiperSlide>
                     ))}
                 </Swiper>

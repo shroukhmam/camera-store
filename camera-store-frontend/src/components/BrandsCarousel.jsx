@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
 import '../styles/BrandsCarousel.css';
 
 const BrandsCarousel = ({ items }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
     const [visibleItemsCount, setVisibleItemsCount] = useState(10);
-    const carouselRef = useRef(null);
-    const intervalRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
 
     // Handle responsive visibility
     useEffect(() => {
@@ -25,37 +27,6 @@ const BrandsCarousel = ({ items }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Auto-rotation with visible items count
-    useEffect(() => {
-        if (!isPaused && items.length > 0) {
-            intervalRef.current = setInterval(() => {
-                setCurrentIndex(prev => (prev + visibleItemsCount) % items.length);
-            }, 3000);
-        }
-
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-    }, [items.length, isPaused, visibleItemsCount]);
-
-    // Navigation handlers
-    const nextSlide = () => {
-        setCurrentIndex(prev => (prev + visibleItemsCount) % items.length);
-        resetInterval();
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex(prev => (prev - visibleItemsCount + items.length) % items.length);
-        resetInterval();
-    };
-
-    const resetInterval = () => {
-        clearInterval(intervalRef.current);
-        intervalRef.current = setInterval(() => {
-            setCurrentIndex(prev => (prev + visibleItemsCount) % items.length);
-        }, 3000);
-    };
-
     // Arrow icon component
     const ArrowIcon = ({ direction = 'left' }) => (
         <svg
@@ -73,50 +44,69 @@ const BrandsCarousel = ({ items }) => {
         </svg>
     );
 
-    // Calculate visible items
-    const getVisibleItems = () => {
-        if (!items || items.length === 0) return [];
-
-        const result = [];
-        for (let i = 0; i < Math.min(visibleItemsCount, items.length); i++) {
-            const index = (currentIndex + i) % items.length;
-            result.push(items[index]);
-        }
-        return result;
-    };
-
     return (
         <div className="carousel-container">
             <div
                 className="carousel-wrapper"
-                ref={carouselRef}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
+                <Swiper
+                    modules={[Navigation, Autoplay]}
+                    spaceBetween={15}
+                    slidesPerView={visibleItemsCount}
+                    navigation={{
+                        prevEl: '.carousel-arrow.prev',
+                        nextEl: '.carousel-arrow.next',
+                    }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    }}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 4,
+                            slidesPerGroup: 4,
+                            spaceBetween: 10
+                        },
+                        768: {
+                            slidesPerView: 7,
+                            slidesPerGroup: 7,
+                            spaceBetween: 15
+                        },
+                        1200: {
+                            slidesPerView: 10,
+                            slidesPerGroup: 10,
+                            spaceBetween: 15
+                        }
+                    }}
+                >
+                    {items.map((item, index) => (
+                        <SwiperSlide key={`${item.id}-${index}`}>
+                            <div className="carousel-item">
+                                <img
+                                    src={item.img}
+                                    alt={item.name}
+                                    loading="lazy"
+                                />
+                                <div className="brand-name">{item.name}</div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+
                 <button
                     className="carousel-arrow prev"
-                    onClick={prevSlide}
                     aria-label="Previous items"
                 >
                     <ArrowIcon direction="left" />
                 </button>
 
-                <div className="carousel-track">
-                    {getVisibleItems().map((item, index) => (
-                        <div key={`${item.id}-${index}`} className="carousel-item">
-                            <img
-                                src={item.img}
-                                alt={item.name}
-                                loading="lazy"
-                            />
-                            <div className="brand-name">{item.name}</div>
-                        </div>
-                    ))}
-                </div>
-
                 <button
                     className="carousel-arrow next"
-                    onClick={nextSlide}
                     aria-label="Next items"
                 >
                     <ArrowIcon direction="right" />
