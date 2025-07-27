@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCamera, FaSearch, FaUser, FaCog } from "react-icons/fa";
+import { FaCamera, FaSearch, FaUser, FaCog, FaBars } from "react-icons/fa"; // تأكدي إنك مستخدمة FaBars أو الأيقونة اللي تقصديها
 import SelectCategory from "./SelectCategory";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -24,8 +24,8 @@ const Navbar = () => {
     <div className="w-full bg-white shadow relative z-0 flex flex-col md:flex-row justify-between items-center px-4 py-3 md:gap-5 gap-3">
       {/* Logo Section with Icons */}
       <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-normal">
-        {/* Settings Icon - Left of Logo */}
-        <button className="text-gray-600 hover:text-orange-600 transition-colors">
+        {/* Settings Icon (show only on small screens) */}
+        <button className="text-gray-600 hover:text-orange-600 transition-colors md:hidden">
           <FaCog className="text-xl" />
         </button>
 
@@ -35,8 +35,9 @@ const Navbar = () => {
           <h1>camera shop</h1>
         </div>
 
-        {/* User Icon - Right of Logo */}
-        <button className="text-gray-600 hover:text-orange-600 transition-colors">
+      
+        {/* User Icon (show only on small screens) */}
+        <button className="text-gray-600 hover:text-orange-600 transition-colors md:hidden">
           <FaUser className="text-xl" />
         </button>
       </div>
