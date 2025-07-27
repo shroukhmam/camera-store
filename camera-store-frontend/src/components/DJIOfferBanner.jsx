@@ -1,7 +1,7 @@
 import React from "react";
-import slider1 from '../assets/images/slider1.png';
-import slider2 from '../assets/images/slider2.jpeg';
-import slider3 from '../assets/images/slider3.png';
+import slider1 from '../../public/assets/images/slider1.png';
+import slider2 from '../../public/assets/images/slider2.jpeg';
+import slider3 from '../../public/assets/images/slider3.png';
 
 export default function DJIOfferBanner() {
     return (
