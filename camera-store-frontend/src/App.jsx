@@ -7,6 +7,8 @@ import { useState } from "react";
 import Home from "./Pages/Home.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 import { CartProvider } from "./context/CartContext";
+import AccountPage from "./Pages/AccountPage.jsx";
+import ForgetPassword from "./Pages/ForgetPassword.jsx";
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
