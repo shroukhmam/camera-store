@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "vmiclink5",
+      "title": "Saramonic VmicLink5 (3×1)",
+      "price": "25,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/06/Saramonic-VmicLink5-RXTXTXTX-2-1-80x80.webp"
+    },
+    {
+      "id": "uwmic9-kit2",
+      "title": "Saramonic UwMic9 kit",
+      "price": "8,500 - 17,500 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/03/Saramonic-UwMic9-Kit2-2-80x80.webp"
+    },
+    {
+      "id": "uwmic9-kit4",
+      "title": "Saramonic UwMic9 Kit4",
+      "price": "15,000 EGP",
+      "originalPrice": "18,500 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2025/02/Saramonic-UwMic9-Kit4-UHF-Wireless-Lavalier-Microphone-System-80x80.webp"
+    },
+    {
+      "id": "blink-me",
+      "title": "Saramonic Blink Me 2-Person",
+      "price": "13,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/08/Saramonic-Blink-Me-2-Person-1-80x80.webp"
+    },
+        {
+      "id": "blink-me-2-person",
+      "title": "Blink Me 2-Person",
+      "price": "15,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/08/Saramonic-Blink-Me-2-Person-1-80x80.webp"
+    },
+
+{      "id": "blink-me-2-person",
+      "title": "Saramonic SR-",
+      "price": "20,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/08/Saramonic-Blink-Me-2-Person-1-80x80.webp"
+    }
+    ,
+    {
+      "id": "uwmic9-kit2",
+      "title": "Saramonic VMIC",
+      "price": "3,250 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2021/03/Saramonic-UwMic9-Kit2-2-80x80.webp"
+    }
+
+  ]
+}

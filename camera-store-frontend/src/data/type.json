@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Canon EOS R5 Mark II",
+      "category": "Mirrorless Camera",
+      "price": "230,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview.png",
+      "sku": "01736"
+    },
+    {
+      "id": 2,
+      "name": "DJI RS4 Mini",
+      "category": "Gimbal Stabilizer",
+      "price": "15,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2025/03/1740037543_1874871.png",
+      "sku": "01737"
+    },
+    {
+      "id": 3,
+      "name": "Sony A7 IV",
+      "category": "Mirrorless Camera",
+      "price": "180,000 EGP",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2023/11/1701180000_1789456.png",
+      "sku": "01738"
+    }
+  ]
+}
