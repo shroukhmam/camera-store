@@ -1,0 +1,327 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Camera",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/camera-150x150.png",
+      "product_count": 6,
+      "products": [
+        {
+          "id": 31469,
+          "name": "Canon EOS R5 C Mirrorless Cinema Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/canon_5077c002_eos_r5_c_full_frame_1642574759_1684244-removebg-preview.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1642574825_IMG_1676604-removebg-preview.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292924-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292927-removebg-preview-150x150.png"
+          ],
+          "stock_status": "Available on backorder",
+          "price": "250,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "type": "Mirrorless",
+          "category": "Camera",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 32469,
+          "name": "Canon EOS R3 Mirrorless Cinema Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "In Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "category": "Camera",
+          "type": "Mirrorless",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 32468,
+          "name": "Canon EOS R5 Mark II Mirrorless",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "out of Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "category": "Camera",
+          "type": "Mirrorless",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 32467,
+          "name": "Canon EOS R5 Mirrorless Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "In Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "category": "Camera",
+          "type": "Mirrorless",
+          "offer": "5%",
+          "new": "1",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 32466,
+          "name": "Canon EOS R3 Mirrorless Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "In Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "category": "Camera",
+          "type": "Mirrorless",
+          "offer": "15%",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 35467,
+          "name": "Canon EOS R54 Mirrorless Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "In Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "category": "Camera",
+          "type": "Mirrorless",
+          "new": "1",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "stabilizer",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/12/stabilizer-banner-150x150.png",
+      "product_count": 3,
+      "products": [
+        {
+          "id": 31,
+          "name": "Hohem iSteady V3 AI Smartphone",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/Hohem-iSteady-V3-AI-Smartphone-Gimbal-with-AI-Tracker-Fill-Light-ModuleWhite.jpg"
+          ],
+          "stock_status": "Available on backorder",
+          "price": "250,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "type": "hohem",
+          "category": "stabilizer",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 32,
+          "name": "Canon EOS R3 Mirrorless Cinema Camera",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "In Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "type": "DJI",
+          "category": "stabilizer",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 33,
+          "name": "DJI RS 4 Pro Gimbal Stabilizer",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721198413_1840289-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
+          ],
+          "stock_status": "out of Stock",
+          "price": "230,000 EGP",
+          "sku": "01707",
+          "brand": "Canon",
+          "type": "DJI",
+          "category": "stabilizer",
+          "offer": "15%",
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Lens",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/LENS-1-150x150.png",
+      "product_count": 7,
+      "products": [
+        {
+          "id": 1001,
+          "name": "Canon RF 50mm f/1.2L USM Lens",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-2-150x150.webp",
+            "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-4-150x150.webp",
+            "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-3-150x150.webp",
+            "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-1-150x150.webp"
+          ],
+          "stock_status": "In Stock",
+          "price": "45,000 EGP",
+          "sku": "LENS001",
+          "brand": "Canon",
+          "category": "Lens",
+          "offer": "10%",
+          "description": "Professional-grade prime lens with ultra-wide aperture for stunning bokeh and low-light performance."
+        },
+        {
+          "id": 1002,
+          "name": "Sony FE 24-70mm f/2.8 GM II",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/10/1581551173_1547011-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/10/1594281073_IMG_1384544-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/10/1594281073_IMG_1384540-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/10/1594281073_IMG_1384539-removebg-preview-150x150.png",
+            "https://camerashop.com.eg/wp-content/uploads/2024/10/1581551173_1547011-removebg-preview-150x150.png"
+          ],
+          "stock_status": "Available on backorder",
+          "price": "60,000 EGP",
+          "sku": "LENS002",
+          "brand": "Sony",
+          "category": "Lens",
+          "new": "1",
+          "description": "Versatile zoom lens for full-frame Sony cameras, ideal for photography and videography."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "professional Video Camera",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/PRO-VIDEO-150x150.png",
+      "product_count": 15
+    },
+    {
+      "id": 5,
+      "name": "Lights",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/LIGHTS-150x150.png",
+      "product_count": 4,
+      "products": [
+        {
+          "id": 5001,
+          "name": "Aputure 300D Mark II LED Light",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/aputure-300d-mark-ii-1-150x150.jpg",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/aputure-300d-mark-ii-2-150x150.jpg"
+          ],
+          "stock_status": "In Stock",
+          "price": "15,000 EGP",
+          "sku": "LIGHT001",
+          "type": "Heads",
+          "category": "Lights",
+          "offer": "5%",
+          "description": "Bright 300W LED light with high CRI for professional video and photography lighting."
+        },
+        {
+          "id": 5002,
+          "name": "Godox SL60W Bi-Color LED Video Light",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/godox-sl60w-1-150x150.jpg"
+          ],
+          "stock_status": "In Stock",
+          "price": "8,500 EGP",
+          "sku": "LIGHT002",
+          "type": "Heads",
+          "category": "Lights",
+          "description": "60W bi-color LED light with adjustable color temperature from 3200K to 5600K."
+        },
+        {
+          "id": 5003,
+          "name": "Neewer 660 LED Video Light Panel",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/neewer-660-1-150x150.jpg",
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/neewer-660-2-150x150.jpg"
+          ],
+          "stock_status": "Available on backorder",
+          "price": "6,000 EGP",
+          "sku": "LIGHT003",
+          "type": "Flash",
+          "category": "Lights",
+          "new": "1",
+          "description": "Bright 660 LED light panel with adjustable brightness and color temperature."
+        },
+        {
+          "id": 5004,
+          "name": "SmallRig RC 120B LED Light",
+          "images": [
+            "https://camerashop.com.eg/wp-content/uploads/2024/12/smallrig-rc120b-1-150x150.jpg"
+          ],
+          "stock_status": "In Stock",
+          "price": "4,500 EGP",
+          "sku": "LIGHT004",
+          "type": "Flash",
+          "category": "Lights",
+          "offer": "10%",
+          "description": "Compact and powerful 120W LED light with high CRI for on-the-go shooting."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Memory",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/MEMORY-CARD-1-150x150.png",
+      "product_count": 43,
+      "url": "https://camerashop.com.eg/product-category/memory/"
+    },
+    {
+      "id": 7,
+      "name": "Microphone",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/MICROPHONES-150x150.png",
+      "product_count": 150
+    },
+    {
+      "id": 8,
+      "name": "Printer",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/PRINTERS-150x150.png",
+      "product_count": 10
+    },
+    {
+      "id": 9,
+      "name": "Tripods",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/TRIPODS-150x150.png",
+      "product_count": 89
+    },
+    {
+      "id": 10,
+      "name": "Video Mixers",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/VIDEO-MIXERS-150x150.png",
+      "product_count": 17
+    },
+    {
+      "id": 11,
+      "name": "Accessories",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/Accessories-150x150.png",
+      "product_count": 274
+    }
+  ],
+  "count": 11
+}

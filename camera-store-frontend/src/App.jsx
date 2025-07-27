@@ -4,7 +4,9 @@ import SubNavbar from "./components/SubNavbar";
 import brandsData from './data/brands.json';
 import BrandsCarousel from "./components/BrandsCarousel.jsx";
 import {useState} from "react";
-import MegaMenu from "./components/MegaMenu.jsx"; // Your brands data
+import MegaMenu from "./components/MegaMenu.jsx";
+import DJIOfferBanner from "./components/DJIOfferBanner.jsx";
+import CategoryCarousel from "./components/CategoryCarousel.jsx"; // Your brands data
 
 function App() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,10 +22,11 @@ function App() {
         <div className="pl-0 sm:pl-0 md:pl-[60px] lg:pl-[60px] xl:pl-[60px]">
           <Navbar />
           <SubNavbar />
+            <DJIOfferBanner />
             <BrandsCarousel items={brandsData} />
+            <CategoryCarousel />
           <Footer/>
         </div>
-      {/* باقي الموقع هنا */}
     </div>
   );
 }

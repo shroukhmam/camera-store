@@ -52,6 +52,28 @@
   },
   {
     "id": 2,
+    "name": "stabilizer",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/12/stabilizer-icon-150x150.png",
+    "brands": [
+      {
+        "id": 10,
+        "name": "DJI",
+        "types": []
+      },
+      {
+        "id": 19,
+        "name": "Hohem",
+        "types": []
+      },
+      {
+        "id": 62,
+        "name": "Zhiyun",
+        "types": []
+      }
+    ]
+  },
+  {
+    "id": 3,
     "name": "Lens",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/lens-icon.png",
     "brands": [
@@ -78,7 +100,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "professional Video Camera",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/pro-video-icon-1-150x150.png",
     "brands": [
@@ -90,23 +112,6 @@
       {
         "id": 4,
         "name": "BlackMagic",
-        "types": []
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Printer",
-    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/printer-icon-150x150.png",
-    "brands": [
-      {
-        "id": 7,
-        "name": "Canon",
-        "types": []
-      },
-      {
-        "id": 6,
-        "name": "Brother",
         "types": []
       }
     ]
@@ -248,28 +253,50 @@
   },
   {
     "id": 8,
-    "name": "stabilizer",
-    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/12/stabilizer-icon-150x150.png",
+    "name": "Printer",
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/printer-icon-150x150.png",
     "brands": [
       {
-        "id": 10,
-        "name": "DJI",
+        "id": 7,
+        "name": "Canon",
         "types": []
       },
       {
-        "id": 19,
-        "name": "Hohem",
-        "types": []
-      },
-      {
-        "id": 62,
-        "name": "Zhiyun",
+        "id": 6,
+        "name": "Brother",
         "types": []
       }
     ]
   },
   {
     "id": 9,
+    "name": "Tripods",
+    "icon": null,
+    "brands": [
+      {
+        "id": 28,
+        "name": "MANFROTTO",
+        "types": [
+          {
+            "id": 22,
+            "name": "Tripod"
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "JOBY",
+        "types": [
+          {
+            "id": 23,
+            "name": "Tripod"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
     "name": "Video Mixers",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/video-mixer-icon-150x150.png",
     "brands": [
@@ -281,7 +308,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "Accessories",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/accessories-icon-150x150.png",
     "types": [
@@ -310,26 +337,6 @@
           {
             "id": 21,
             "name": "Bag"
-          }
-        ]
-      },
-      {
-        "id": 28,
-        "name": "MANFROTTO",
-        "types": [
-          {
-            "id": 22,
-            "name": "Tripod"
-          }
-        ]
-      },
-      {
-        "id": 23,
-        "name": "JOBY",
-        "types": [
-          {
-            "id": 23,
-            "name": "Tripod"
           }
         ]
       }

@@ -1,6 +1,6 @@
 .carousel-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px; /* Increased for 10 items */
     margin: 0 auto;
     padding: 20px;
     overflow: hidden;
@@ -14,7 +14,7 @@
 }
 
 .carousel-item {
-    flex: 0 0 calc(14.2857% - 13px); /* 7 items (100/7 ≈ 14.2857) minus gap */
+    flex: 0 0 calc(10% - 13px); /* 10 items (100/10 = 10%) minus gap */
     min-width: 0;
     text-align: center;
     transition: all 0.3s ease;
@@ -46,7 +46,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
+    /*background: rgba(255, 255, 255, 0.7);*/
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -63,11 +63,11 @@
 }
 
 .carousel-arrow.prev {
-    left: 10px;
+    left: 2px;
 }
 
 .carousel-arrow.next {
-    right: 10px;
+    right: -13px;
 }
 
 .pagination-dots {
@@ -75,6 +75,10 @@
     justify-content: center;
     margin-top: 15px;
     gap: 8px;
+}
+
+.pagination-dots.hidden-on-large {
+    display: none;
 }
 
 .dot {
@@ -94,13 +98,7 @@
 /* Responsive adjustments */
 @media (max-width: 1200px) {
     .carousel-item {
-        flex: 0 0 calc(16.6667% - 13px); /* 6 items */
-    }
-}
-
-@media (max-width: 992px) {
-    .carousel-item {
-        flex: 0 0 calc(20% - 13px); /* 5 items */
+        flex: 0 0 calc(14.2857% - 13px); /* 7 items (100/7 ≈ 14.2857) minus gap */
     }
 }
 
@@ -108,10 +106,8 @@
     .carousel-item {
         flex: 0 0 calc(25% - 13px); /* 4 items */
     }
-}
 
-@media (max-width: 576px) {
-    .carousel-item {
-        flex: 0 0 calc(33.3333% - 13px); /* 3 items */
+    .pagination-dots {
+        display: flex;
     }
 }
