@@ -12,6 +12,8 @@ import ForgetPassword from "./Pages/ForgetPassword.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Brands from "./Pages/Brands.jsx";
 import Outlet from "./Pages/outlet.jsx";
+import Exclusives from "./Pages/Exclusives.jsx";
+import Promotions from "./Pages/Promotions.jsx";
 // ✅ ملف داخل App لحساب موقعك الحالي
 function LayoutWrapper() {
     const location = useLocation();
@@ -22,7 +24,7 @@ function LayoutWrapper() {
 
     return (
         <div className="App">
-            {!isBrandsPage &&
+
                <>
                 <button
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -33,7 +35,7 @@ function LayoutWrapper() {
 
                <MegaMenu open={menuOpen} setOpen={setMenuOpen} />
                </>
-            }
+
 
             <div className="pl-0 sm:pl-0 md:pl-[60px] lg:pl-[60px] xl:pl-[60px]">
                 {!isBrandsPage && <Navbar />}
@@ -46,7 +48,8 @@ function LayoutWrapper() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/brand" element={<Brands />} />
                     <Route path="/outlet" element={<Outlet />} />
-
+                    <Route path="/exclusives" element={<Exclusives />} />
+                    <Route path="/promotions" element={<Promotions />} />
                     <Route path="/product/:id" element={<ProductPage />} />
                 </Routes>
 
