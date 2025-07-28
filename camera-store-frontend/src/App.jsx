@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
+import {BrowserRouter, Routes, Route, Link, useLocation} from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import SubNavbar from "./components/SubNavbar";
@@ -11,6 +11,7 @@ import AccountPage from "./Pages/AccountPage.jsx";
 import ForgetPassword from "./Pages/ForgetPassword.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Brands from "./Pages/Brands.jsx";
+import Outlet from "./Pages/outlet.jsx";
 // ✅ ملف داخل App لحساب موقعك الحالي
 function LayoutWrapper() {
     const location = useLocation();
@@ -44,6 +45,8 @@ function LayoutWrapper() {
                     <Route path="/" element={<Home />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/brand" element={<Brands />} />
+                    <Route path="/outlet" element={<Outlet />} />
+
                     <Route path="/product/:id" element={<ProductPage />} />
                 </Routes>
 

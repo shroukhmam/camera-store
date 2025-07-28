@@ -1,8 +1,8 @@
 [
   { "name": "Store", "to": "/" },
   { "name": "Brands", "to": "/brand" },
-  { "name": "Outlet", "to": "/" },
-  { "name": "EXCLUSIVES", "to": "/" },
-  { "name": "Promotions", "to": "/" },
+  { "name": "Outlet", "to": "/outlet" },
+  { "name": "EXCLUSIVES", "to": "/exclusives" },
+  { "name": "Promotions", "to": "/promotions" },
   { "name": "Our Contacts", "to": "/contact" }
 ]

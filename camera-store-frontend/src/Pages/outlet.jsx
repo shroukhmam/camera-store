@@ -1,22 +1,12 @@
-import DJIOfferBanner from "../components/DJIOfferBanner.jsx";
-import BrandsCarousel from "../components/BrandsCarousel.jsx";
-import CategoryCarousel from "../components/CategoryCarousel.jsx";
 import ProductCarousel from "../components/ProductCarousel.jsx";
-import brandsData from "../data/brands.json";
-import Slider from "../components/Slider.jsx";
-import Type from "../components/Type.jsx";
 import categoriesData from "../data/CategoryProduct.json";
+import OutletDetails from "../components/outletDetails.jsx";
 
-export default function Home({ onAddToCart }) {
+export default function Outlet({ onAddToCart }) {
     if (!categoriesData?.categories) {
         return <div>Loading products...</div>;
     }
 
-    const discountedProducts = categoriesData.categories.flatMap(category =>
-        category.products?.filter(product =>
-            product.discount  || (product.sale_price && product.original_price)
-        ) || []
-    );
 
     const lightsCategory = categoriesData.categories.find(
         category => category.name.toLowerCase() === 'lights'
@@ -31,13 +21,8 @@ export default function Home({ onAddToCart }) {
 
     return (
         <>
-            <DJIOfferBanner />
-            <BrandsCarousel items={brandsData} />
-            <CategoryCarousel />
-            <ProductCarousel products={discountedProducts} nameSection="The Best Offers" onAddToCart={onAddToCart} />
-            <Slider />
+            <OutletDetails />
             <ProductCarousel products={lightProducts} nameSection="Lights......" onAddToCart={onAddToCart} />
-            <Type />
             <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
 
         </>
