@@ -11,7 +11,6 @@ import AccountPage from "./Pages/AccountPage.jsx";
 import ForgetPassword from "./Pages/ForgetPassword.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Brands from "./Pages/Brands.jsx";
-
 // ✅ ملف داخل App لحساب موقعك الحالي
 function LayoutWrapper() {
     const location = useLocation();
@@ -22,14 +21,18 @@ function LayoutWrapper() {
 
     return (
         <div className="App">
-            <button
+            {!isBrandsPage &&
+               <>
+                <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="fixed top-4 left-4 z-50 bg-orange-500 ml-[80%] text-white px-4 py-2 rounded md:hidden"
-            >
+                className="fixed top-4 left-4 z-50 text-black   py-1 rounded md:hidden"
+                >
                 ☰
-            </button>
+               </button>
 
-            <MegaMenu open={menuOpen} setOpen={setMenuOpen} />
+               <MegaMenu open={menuOpen} setOpen={setMenuOpen} />
+               </>
+            }
 
             <div className="pl-0 sm:pl-0 md:pl-[60px] lg:pl-[60px] xl:pl-[60px]">
                 {!isBrandsPage && <Navbar />}

@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Camera",
       "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/camera-150x150.png",
-      "product_count": 6,
+      "product_count": 16,
       "products": [
         {
           "id": 31469,
@@ -15,8 +15,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292924-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292927-removebg-preview-150x150.png"
           ],
-          "stock_status": "Available on backorder",
-          "price": "250,000 EGP",
+          "stock": "Available on backorder",
+          "price": "250.000",
           "sku": "01707",
           "brand": "Canon",
           "type": "Mirrorless",
@@ -32,8 +32,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "In Stock",
-          "price": "230,000 EGP",
+          "stock": "In Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "category": "Camera",
@@ -49,8 +49,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "out of Stock",
-          "price": "230,000 EGP",
+          "stock": "out of Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "category": "Camera",
@@ -66,8 +66,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "In Stock",
-          "price": "230,000 EGP",
+          "stock": "In Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "category": "Camera",
@@ -85,8 +85,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "In Stock",
-          "price": "230,000 EGP",
+          "stock": "In Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "category": "Camera",
@@ -103,14 +103,172 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "In Stock",
-          "price": "230,000 EGP",
+          "stock": "In Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "category": "Camera",
           "type": "Mirrorless",
           "new": "1",
           "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },{
+          "id": 28532,
+          "name": "Canon EOS R50 Content Creator Kit",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "50.000",
+          "sale_price": "44.000",
+          "discount": "-12%",
+          "sku": "01664-1",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/09/1683762334_1766852-removebg-preview.png"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 30690,
+          "name": "Canon EOS 80D DSLR Camera (Body Only)",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "75.000",
+          "sale_price": "50.000",
+          "discount": "-33%",
+          "sku": "01239",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/12/canon_1263c004_eos_80d_dslr_camera_1455749513_1225875-removebg-preview.png"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 14579,
+          "name": "Canon EOS R10 Mirrorless Camera with 18-45mm Lens",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "Out of stock",
+          "original_price": "59.000",
+          "sale_price": "49.000",
+          "discount": "-17%",
+          "sku": "01647",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/03/Canon_R10_11.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 16237,
+          "name": "Canon EOS R52 Content Creator ",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "40.000",
+          "sale_price": "37,500",
+          "discount": "-6%",
+          "sku": "01664",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/09/Canon-EOS-R50-Mirrorless-Camera-with-18-45mm-Lens-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 11694,
+          "name": "Canon EOS R5 Mirrorless Camera (Body Only)",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "150.000",
+          "sale_price": "130.000",
+          "discount": "-13%",
+          "sku": "01523",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2021/07/Canon-EOS-R5-Mirrorless-Camera-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 15868,
+          "name": "Canon EOS R6 Mark II Mirrorless Camera",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "price_range": {
+            "min": "99.000",
+            "max": "123.000"
+          },
+          "discount": "-5%",
+          "sku": "01642",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-EOS-R6-Mark-II-Mirrorless-Camera-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 11756,
+          "name": "Canon EOS 90D DSLR Camera",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",      "stock": "In stock",
+          "price_range": {
+            "min": "72.000",
+            "max": "99,900"
+          },
+          "discount": "-10%",
+          "sku": "01473",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2021/08/Canon-EOS-90D-DSLR-Camera-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 30685,
+          "name": "Canon EOS R6 Mirrorless Camera",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "100.000",
+          "sale_price": "90.000",
+          "discount": "-10%",
+          "sku": "01494",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/12/canon_eos_r6_mirrorless_digital_1594281159_1547010-removebg-preview.png"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 16228,
+          "name": "Canon EOS R8 Mirrorless Camera (Body Only)",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "price_range": {
+            "min": "60.000",
+            "max": "80.000"
+          },
+          "discount": "-6%",
+          "sku": "01665",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-EOS-R8-Mirrorless-Camera-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 6879,
+          "name": "Canon EOS 6D MARK II BODY",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "75.000",
+          "sale_price": "64.000",
+          "discount": "-15%",
+          "sku": "01394",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/03/Canon-EOS-6D-Mark-II-DSLR-Camera-Body-Only-4.png"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 14217,
+          "name": "Canon EOS R7 Mirrorless Camera",
+          "category": "Camera",
+          "subcategory" : "Mirrorless",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "65.000",
+          "sale_price": "57,500",
+          "discount": "-12%",
+          "sku": "01623",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2021/10/Canon-EOS-R7-Mirrorless-Camera-with-18-150mm-Lens-Official-Warranty-Front-.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
         }
       ]
     },
@@ -126,8 +284,8 @@
           "images": [
             "https://camerashop.com.eg/wp-content/uploads/2024/12/Hohem-iSteady-V3-AI-Smartphone-Gimbal-with-AI-Tracker-Fill-Light-ModuleWhite.jpg"
           ],
-          "stock_status": "Available on backorder",
-          "price": "250,000 EGP",
+          "stock": "Available on backorder",
+          "price": "250.000",
           "sku": "01707",
           "brand": "Canon",
           "type": "hohem",
@@ -143,8 +301,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "In Stock",
-          "price": "230,000 EGP",
+          "stock": "In Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "type": "DJI",
@@ -160,14 +318,56 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647870_IMG_2292923-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/12/1721647576_IMG_2288225-removebg-preview-150x150.png"
           ],
-          "stock_status": "out of Stock",
-          "price": "230,000 EGP",
+          "stock": "out of Stock",
+          "price": "230.000",
           "sku": "01707",
           "brand": "Canon",
           "type": "DJI",
           "category": "stabilizer",
           "offer": "15%",
           "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 28056,
+          "name": "DJI RS 4 Pro Combo Gimbal Stabilizer",
+          "category": "stabilizer",
+          "subcategory" : "DJI",
+          "brand" : "Canon",
+          "stock": "Out of stock",
+          "original_price": "58.000",
+          "sale_price": "55.000",
+          "discount": "-5%",
+          "sku": "01701",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/07/dji-rs4-pro-combo-4.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 28818,
+          "name": "DJI RS 4 Pro Gimbal Stabilizer",
+          "category": "stabilizer",
+          "subcategory" : "DJI",
+          "brand" : "Canon",
+          "stock": "Out of stock",
+          "original_price": "47.000",
+          "sale_price": "45.000",
+          "discount": "-4%",
+          "sku": "01700",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/10/1712652658_IMG_2212597-removebg-preview.png"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 26369,
+          "name": "DJI RS 3 Pro Combo stabilizer",
+          "category": "stabilizer",
+          "subcategory" : "DJI",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "53.000",
+          "sale_price": "41.000",
+          "discount": "-23%",
+          "sku": "01653",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/02/DJI-RS-3-Pro-Combo-1.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
         }
       ]
     },
@@ -186,8 +386,8 @@
             "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-3-150x150.webp",
             "https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-85mm-f-1.2-L-USM-Lens-1-150x150.webp"
           ],
-          "stock_status": "In Stock",
-          "price": "45,000 EGP",
+          "stock": "In Stock",
+          "price": "45.000",
           "sku": "LENS001",
           "brand": "Canon",
           "category": "Lens",
@@ -204,13 +404,96 @@
             "https://camerashop.com.eg/wp-content/uploads/2024/10/1594281073_IMG_1384539-removebg-preview-150x150.png",
             "https://camerashop.com.eg/wp-content/uploads/2024/10/1581551173_1547011-removebg-preview-150x150.png"
           ],
-          "stock_status": "Available on backorder",
-          "price": "60,000 EGP",
+          "stock": "Available on backorder",
+          "price": "60.000",
           "sku": "LENS002",
           "brand": "Sony",
           "category": "Lens",
           "new": "1",
           "description": "Versatile zoom lens for full-frame Sony cameras, ideal for photography and videography."
+        },
+        {
+          "id": 28003,
+          "name": "CANON RF 24-105MM F2.8L IS USM Z",
+          "category": "Lens",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "177.000",
+          "sale_price": "160.000",
+          "discount": "-10%",
+          "sku": "02413",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2024/06/rf-24-105mm-f2-600x600.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+
+        {
+          "id": 15440,
+          "name": "Canon RF 70-200mm f/2.8 L IS USM Lens",
+          "category": "Lens",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "125.000",
+          "sale_price": "120.000",
+          "discount": "-4%",
+          "sku": "02307",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/06/Canon-RF-70-200mm-f-2.8-L-IS-USM-Lens-3.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+        {
+          "id": 14667,
+          "name": "Canon RF 15-35mm f/2.8 L IS USM Lens",
+          "category": "Lens",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "120.000",
+          "sale_price": "115.000",
+          "discount": "-4%",
+          "sku": "02295",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-15-35mm-f-2.8-L-IS-USM-Lens-2.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+
+
+        {
+          "id": 18572,
+          "name": "Sony FE 50mm f/1.2 GM Lens (Sony E)",
+          "category": "Lens",
+          "brand" : "Sony",
+          "stock": "Out of stock",
+          "original_price": "120.000",
+          "sale_price": "80.000",
+          "discount": "-33%",
+          "sku": "02377",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/08/1615895153_1630079.jpg"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+
+        {
+          "id": 16470,
+          "name": "Canon RF 100mm f/2.8 L Macro IS USM Lens",
+          "category": "Lens",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "79.000",
+          "sale_price": "75.000",
+          "discount": "-5%",
+          "sku": "02354",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/07/Canon-RF-100mm-f-2.8-L-Macro-IS-USM-Lens-1.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
+        },
+
+        {
+          "id": 14615,
+          "name": "Canon RF 14-35mm f/4 L IS USM Lens",
+          "category": "Lens",
+          "brand" : "Canon",
+          "stock": "In stock",
+          "original_price": "63.000",
+          "sale_price": "60.000",
+          "discount": "-5%",
+          "sku": "02356",
+          "images": ["https://camerashop.com.eg/wp-content/uploads/2023/03/Canon-RF-14-35mm-f-4-L-IS-USM-Lens-2.webp"],
+          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body.",          "description": "Cinematic Capture in a Compact, Streamlined Form With a compact design for solo shooters, for travel applications, and to serve as an ideal B cam, the Sony FX3 borrows from both the Cinema Line and Alpha series of cameras to create an optimized portable cinema camera. The FX3 features all the imaging attributes you'd expect from this class but sports a new lightweight, handheld form with a streamlined profile and a 'cage-free' design offering the ability to secure various accessories directly to the camera body."
         }
       ]
     },
@@ -230,11 +513,10 @@
           "id": 5001,
           "name": "Aputure 300D Mark II LED Light",
           "images": [
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/aputure-300d-mark-ii-1-150x150.jpg",
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/aputure-300d-mark-ii-2-150x150.jpg"
+            "https://camerashop.com.eg/wp-content/uploads/2023/09/1638379903_IMG_1652349.jpg"
           ],
-          "stock_status": "In Stock",
-          "price": "15,000 EGP",
+          "stock": "In Stock",
+          "price": "15.000",
           "sku": "LIGHT001",
           "type": "Heads",
           "category": "Lights",
@@ -245,10 +527,10 @@
           "id": 5002,
           "name": "Godox SL60W Bi-Color LED Video Light",
           "images": [
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/godox-sl60w-1-150x150.jpg"
+            "https://camerashop.com.eg/wp-content/uploads/2025/02/X-500B-Lite-Bi-Color-LED-Video-Light-600x600.webp"
           ],
-          "stock_status": "In Stock",
-          "price": "8,500 EGP",
+          "stock": "In Stock",
+          "price": "8.500",
           "sku": "LIGHT002",
           "type": "Heads",
           "category": "Lights",
@@ -258,11 +540,10 @@
           "id": 5003,
           "name": "Neewer 660 LED Video Light Panel",
           "images": [
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/neewer-660-1-150x150.jpg",
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/neewer-660-2-150x150.jpg"
+            "https://camerashop.com.eg/wp-content/uploads/2025/01/1645011108_IMG_1683110.jpg"
           ],
-          "stock_status": "Available on backorder",
-          "price": "6,000 EGP",
+          "stock": "Available on backorder",
+          "price": "6.000",
           "sku": "LIGHT003",
           "type": "Flash",
           "category": "Lights",
@@ -273,10 +554,10 @@
           "id": 5004,
           "name": "SmallRig RC 120B LED Light",
           "images": [
-            "https://camerashop.com.eg/wp-content/uploads/2024/12/smallrig-rc120b-1-150x150.jpg"
+            "https://camerashop.com.eg/wp-content/uploads/2025/02/X-500B-Lite-Bi-Color-LED-Video-Light-600x600.webp"
           ],
-          "stock_status": "In Stock",
-          "price": "4,500 EGP",
+          "stock": "In Stock",
+          "price": "4.500",
           "sku": "LIGHT004",
           "type": "Flash",
           "category": "Lights",
@@ -288,7 +569,7 @@
     {
       "id": 6,
       "name": "Memory",
-      "image": "https://camerashop.com.eg/wp-content/uploads/2024/11/MEMORY-CARD-1-150x150.png",
+      "image": "https://camerashop.com.eg/wp-content/uploads/2025/02/GK-Panel-700B-Bi-Color-Light-Panel-2-600x600.webp",
       "product_count": 43,
       "url": "https://camerashop.com.eg/product-category/memory/"
     },

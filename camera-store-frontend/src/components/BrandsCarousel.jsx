@@ -79,7 +79,7 @@ const BrandsCarousel = ({ items }) => {
                         },
                         1200: {
                             slidesPerView: 10,
-                            slidesPerGroup: 10,
+                            slidesPerGroup: 7,
                             spaceBetween: 15
                         }
                     }}

@@ -1,0 +1,8 @@
+[
+  { "name": "Store", "to": "/" },
+  { "name": "Brands", "to": "/brand" },
+  { "name": "Outlet", "to": "/" },
+  { "name": "EXCLUSIVES", "to": "/" },
+  { "name": "Promotions", "to": "/" },
+  { "name": "Our Contacts", "to": "/contact" }
+]

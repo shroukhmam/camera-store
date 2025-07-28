@@ -3,48 +3,49 @@
     "id": 1,
     "name": "Camera",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/camera-icon-2.png",
-    "brands": [
+    "subcategories": [
       {
-        "id": 7,
-        "name": "Canon",
-        "types": [
+        "id": 1,
+        "name": "DSLR",
+        "brands": [
           {
-            "id": 1,
-            "name": "DSLR"
+            "id": 7,
+            "name": "Canon"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Mirrorless",
+        "brands": [
+          {
+            "id": 7,
+            "name": "Canon"
           },
           {
-            "id": 2,
-            "name": "Mirrorless"
+            "id": 46,
+            "name": "Sony"
           }
         ]
       },
       {
-        "id": 46,
-        "name": "Sony",
-        "types": [
-          {
-            "id": 3,
-            "name": "Mirrorless"
-          }
+        "id": 3,
+        "name": "Accessories",
+        "brands": [
+
         ]
       },
       {
-        "id": 17,
-        "name": "GoPro",
-        "types": [
+        "id": 4,
+        "name": "Action",
+        "brands": [
           {
-            "id": 4,
-            "name": "Action"
-          }
-        ]
-      },
-      {
-        "id": 10,
-        "name": "DJI",
-        "types": [
+            "id": 17,
+            "name": "GoPro"
+          },
           {
-            "id": 5,
-            "name": "Action"
+            "id": 10,
+            "name": "DJI"
           }
         ]
       }
@@ -57,18 +58,15 @@
     "brands": [
       {
         "id": 10,
-        "name": "DJI",
-        "types": []
+        "name": "DJI"
       },
       {
         "id": 19,
-        "name": "Hohem",
-        "types": []
+        "name": "Hohem"
       },
       {
         "id": 62,
-        "name": "Zhiyun",
-        "types": []
+        "name": "Zhiyun"
       }
     ]
   },
@@ -79,23 +77,19 @@
     "brands": [
       {
         "id": 7,
-        "name": "Canon",
-        "types": []
+        "name": "Canon"
       },
       {
         "id": 46,
-        "name": "Sony",
-        "types": []
+        "name": "Sony"
       },
       {
         "id": 45,
-        "name": "SIGMA",
-        "types": []
+        "name": "SIGMA"
       },
       {
         "id": 50,
-        "name": "tamron",
-        "types": []
+        "name": "tamron"
       }
     ]
   },
@@ -106,13 +100,11 @@
     "brands": [
       {
         "id": 7,
-        "name": "Canon",
-        "types": []
+        "name": "Canon"
       },
       {
         "id": 4,
-        "name": "BlackMagic",
-        "types": []
+        "name": "BlackMagic"
       }
     ]
   },
@@ -120,64 +112,110 @@
     "id": 5,
     "name": "Lights",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/light-icon-150x150.png",
-    "brands": [
+    "subcategories": [
       {
-        "id": 53,
-        "name": "Tolifo",
-        "types": [
+        "id": 6,
+        "name": "Compact",
+        "brands": [
           {
-            "id": 6,
-            "name": "Compact"
+            "id": 53,
+            "name": "Tolifo"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Tube",
+        "brands": [
+          {
+            "id": 53,
+            "name": "Tolifo"
           },
           {
-            "id": 7,
-            "name": "Tube"
+            "id": 12,
+            "name": "FalconEyes"
           },
           {
-            "id": 8,
-            "name": "RingLight"
+            "id": 32,
+            "name": "NanLite"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "RingLight",
+        "brands": [
+          {
+            "id": 53,
+            "name": "Tolifo"
+          },
+          {
+            "id": 12,
+            "name": "FalconEyes"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Tube",
+        "brands": [
+          {
+            "id": 12,
+            "name": "FalconEyes"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Panel",
+        "brands": [
+          {
+            "id": 12,
+            "name": "FalconEyes"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "RingLight",
+        "brands": [
+          {
+            "id": 12,
+            "name": "FalconEyes"
           }
         ]
       },
       {
         "id": 12,
-        "name": "FalconEyes",
-        "types": [
+        "name": "Heads",
+        "brands": [
           {
-            "id": 9,
-            "name": "Tube"
+            "id": 32,
+            "name": "NanLite"
           },
           {
-            "id": 10,
-            "name": "Panel"
-          },
-          {
-            "id": 11,
-            "name": "RingLight"
+            "id": 16,
+            "name": "GODOX"
           }
         ]
       },
       {
-        "id": 32,
-        "name": "NanLite",
-        "types": [
+        "id": 13,
+        "name": "Tube",
+        "brands": [
           {
-            "id": 12,
-            "name": "Heads"
-          },
-          {
-            "id": 13,
-            "name": "Tube"
+            "id": 32,
+            "name": "NanLite"
           }
         ]
       },
       {
-        "id": 16,
-        "name": "GODOX",
-        "types": [
+        "id": 14,
+        "name": "Heads",
+        "brands": [
           {
-            "id": 14,
-            "name": "Heads"
+            "id": 16,
+            "name": "GODOX"
           }
         ]
       }
@@ -187,28 +225,38 @@
     "id": 6,
     "name": "Memory",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/memory-card-icon.png",
-    "brands": [
+    "subcategories": [
       {
-        "id": 40,
-        "name": "SanDisk",
-        "types": [
+        "id": 15,
+        "name": "SD",
+        "brands": [
           {
-            "id": 15,
-            "name": "SD"
+            "id": 40,
+            "name": "SanDisk"
           },
           {
-            "id": 16,
-            "name": "CF Express"
+            "id": 46,
+            "name": "Sony"
           }
         ]
       },
       {
-        "id": 46,
-        "name": "Sony",
-        "types": [
+        "id": 16,
+        "name": "CF Express",
+        "brands": [
           {
-            "id": 17,
-            "name": "SD"
+            "id": 40,
+            "name": "SanDisk"
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "SD",
+        "brands": [
+          {
+            "id": 46,
+            "name": "Sony"
           }
         ]
       }
@@ -218,34 +266,34 @@
     "id": 7,
     "name": "Microphone",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/mic-icon-1-150x150.png",
-    "brands": [
+    "subcategories": [
       {
-        "id": 10,
-        "name": "DJI",
-        "types": [
+        "id": 18,
+        "name": "Wireless",
+        "brands": [
           {
-            "id": 18,
-            "name": "Wireless"
+            "id": 10,
+            "name": "DJI"
           }
         ]
       },
       {
-        "id": 5,
-        "name": "Boya",
-        "types": [
+        "id": 19,
+        "name": "Lavalier",
+        "brands": [
           {
-            "id": 19,
-            "name": "Lavalier"
+            "id": 5,
+            "name": "Boya"
           }
         ]
       },
       {
-        "id": 37,
-        "name": "RODE",
-        "types": [
+        "id": 20,
+        "name": "Shotgun",
+        "brands": [
           {
-            "id": 20,
-            "name": "Shotgun"
+            "id": 37,
+            "name": "RODE"
           }
         ]
       }
@@ -258,38 +306,36 @@
     "brands": [
       {
         "id": 7,
-        "name": "Canon",
-        "types": []
+        "name": "Canon"
       },
       {
         "id": 6,
-        "name": "Brother",
-        "types": []
+        "name": "Brother"
       }
     ]
   },
   {
     "id": 9,
     "name": "Tripods",
-    "icon": null,
-    "brands": [
+    "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/tripods-icon-150x150.png",
+    "subcategories": [
       {
-        "id": 28,
-        "name": "MANFROTTO",
-        "types": [
+        "id": 22,
+        "name": "Tripod",
+        "brands": [
           {
-            "id": 22,
-            "name": "Tripod"
+            "id": 28,
+            "name": "MANFROTTO"
           }
         ]
       },
       {
         "id": 23,
-        "name": "JOBY",
-        "types": [
+        "name": "Tripodd",
+        "brands": [
           {
             "id": 23,
-            "name": "Tripod"
+            "name": "JOBY"
           }
         ]
       }
@@ -302,8 +348,7 @@
     "brands": [
       {
         "id": 47,
-        "name": "SWIT",
-        "types": []
+        "name": "SWIT"
       }
     ]
   },
@@ -311,10 +356,16 @@
     "id": 11,
     "name": "Accessories",
     "icon": "https://camerashop.com.eg/wp-content/uploads/2024/11/accessories-icon-150x150.png",
-    "types": [
+    "subcategories": [
       {
         "id": 101,
-        "name": "Bag"
+        "name": "Bag",
+        "brands": [
+          {
+            "id": 26,
+            "name": "LOWEPRO"
+          }
+        ]
       },
       {
         "id": 102,
@@ -327,18 +378,6 @@
       {
         "id": 104,
         "name": "Battery"
-      }
-    ],
-    "brands": [
-      {
-        "id": 26,
-        "name": "LOWEPRO",
-        "types": [
-          {
-            "id": 21,
-            "name": "Bag"
-          }
-        ]
       }
     ]
   }

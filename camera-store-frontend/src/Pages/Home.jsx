@@ -3,22 +3,44 @@ import BrandsCarousel from "../components/BrandsCarousel.jsx";
 import CategoryCarousel from "../components/CategoryCarousel.jsx";
 import ProductCarousel from "../components/ProductCarousel.jsx";
 import brandsData from "../data/brands.json";
-import productData from "../data/productOffer.json";
 import Slider from "../components/Slider.jsx";
 import Type from "../components/Type.jsx";
+import categoriesData from "../data/CategoryProduct.json";
 
 export default function Home({ onAddToCart }) {
+    if (!categoriesData?.categories) {
+        return <div>Loading products...</div>;
+    }
+
+    const discountedProducts = categoriesData.categories.flatMap(category =>
+        category.products?.filter(product =>
+            product.discount  || (product.sale_price && product.original_price)
+        ) || []
+    );
+
+    const lightsCategory = categoriesData.categories.find(
+        category => category.name.toLowerCase() === 'lights'
+    );
+
+    const lightProducts = lightsCategory?.products || [];
+    const stabilizerCategory = categoriesData.categories.find(
+        category => category.name.toLowerCase() === 'stabilizer'
+    );
+
+    const stabilizerProducts = stabilizerCategory?.products || [];
+
+    console.log('Number of light products:', lightProducts.length); // This will log the count
     return (
         <>
             <DJIOfferBanner />
             <BrandsCarousel items={brandsData} />
             <CategoryCarousel />
-            <div className="mt-8 px-4">
-                <h2 className="text-xl font-semibold text-orange-600 mb-4">Top Offers</h2>
-                <ProductCarousel products={productData.products} onAddToCart={onAddToCart} />
-            </div>
+            <ProductCarousel products={discountedProducts} nameSection="The Best Offers" onAddToCart={onAddToCart} />
             <Slider />
+            <ProductCarousel products={lightProducts} nameSection="Lights......" onAddToCart={onAddToCart} />
             <Type />
+            <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
+
         </>
     );
 }

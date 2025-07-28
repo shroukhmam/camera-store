@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import menuData from "../data/megaMenu.json";
-
+import menuItems from "../data/menuItems.json";
+import {Link} from "react-router-dom";
 const SIDEBAR_COLLAPSED = 64;
 const SIDEBAR_EXPANDED = 256;
 
-export default function MegaMenu({open, setOpen}) {
-   // const [open, setOpen] = useState(false);
+export default function MegaMenu({ open, setOpen }) {
     const [hoveredCategory, setHoveredCategory] = useState(null);
     const [activeTab, setActiveTab] = useState("categories");
     const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
@@ -42,105 +42,127 @@ export default function MegaMenu({open, setOpen}) {
     const getSubmenuLeft = () =>
         `${open ? SIDEBAR_EXPANDED : SIDEBAR_COLLAPSED}px`;
 
-    // Mobile-specific render
-    if (isMobile && !open) {
-        return null; // لا تعرض أي حاجة لو مش مفتوح
-    }
-    if (isMobile && open) {
+    // ✅ ✅ ✅ MOBILE RENDER
+    if (isMobile) {
+        if (!open) return null;
+
         return (
-            <div className="bg-white shadow-lg w-[80%] fixed top-0 left-0 z-50">
-                <div className="flex border-b">
-                    <button
-                        className={`flex-1 py-3 text-center font-medium ${activeTab === "categories" ? "bg-orange-500 text-white" : "bg-gray-100 text-gray-600"}`}
-                        onClick={() => setActiveTab("categories")}
-                    >
-                        CATEGORIES
-                    </button>
-                    <button
-                        className={`flex-1 py-3 text-center font-medium ${activeTab === "menu" ? "bg-orange-500 text-white" : "bg-gray-100 text-gray-600"}`}
-                        onClick={() => setActiveTab("menu")}
-                    >
-                        MENU
-                    </button>
-                </div>
+            <>
+                {/* Overlay */}
+                <div
+                    onClick={closeMenu}
+                    className="fixed inset-0 bg-black/40 z-40"
+                />
 
-                {activeTab === "categories" && (
-                    <div className="max-h-[calc(100vh-56px)] overflow-y-auto">
-                        <ul className="divide-y divide-gray-100">
-                            {menuData.map((category) => (
-                                <React.Fragment key={category.id}>
-                                    {/* Main Category Item */}
-                                    <li>
-                                        <button
-                                            className={`w-full text-left px-4 py-3 flex items-center justify-between text-[14px] font-medium 
-              ${hoveredCategory === category.id
-                                                ? "bg-orange-100 text-orange-500"
-                                                : "text-gray-700 hover:bg-gray-100"}`}
-                                            onClick={() => {
-                                                setHoveredCategory(hoveredCategory === category.id ? null : category.id);
-                                            }}
-                                        >
-                                            <span>{category.name}</span>
-                                            <span
-                                                className={`transition-transform duration-300 ${
-                                                    hoveredCategory === category.id
-                                                        ? "rotate-180 text-orange-500"
-                                                        : "text-gray-400"
-                                                }`}
+                {/* Sidebar Menu */}
+                <div className="bg-white shadow-lg w-[80%] fixed top-0 left-0 z-50 max-h-screen overflow-y-auto">
+                    <div className="flex border-b">
+                        <button
+                            className={`flex-1 py-3 text-center font-medium ${activeTab === "categories" ? "bg-orange-500 text-white" : "bg-gray-100 text-gray-600"}`}
+                            onClick={() => setActiveTab("categories")}
+                        >
+                            CATEGORIES
+                        </button>
+                        <button
+                            className={`flex-1 py-3 text-center font-medium ${activeTab === "menu" ? "bg-orange-500 text-white" : "bg-gray-100 text-gray-600"}`}
+                            onClick={() => setActiveTab("menu")}
+                        >
+                            MENU
+                        </button>
+                    </div>
+
+                    {activeTab === "categories" && (
+                        <div>
+                            <ul className="divide-y divide-gray-100">
+                                {menuData.map((category) => (
+                                    <React.Fragment key={category.id}>
+                                        <li>
+                                            <button
+                                                className={`w-full text-left px-4 py-3 flex items-center justify-between text-[14px] font-medium 
+                          ${hoveredCategory === category.id
+                                                    ? "bg-orange-100 text-orange-500"
+                                                    : "text-gray-700 hover:bg-gray-100"}`}
+                                                onClick={() => {
+                                                    setHoveredCategory(hoveredCategory === category.id ? null : category.id);
+                                                }}
                                             >
-                ▼
-              </span>
-                                        </button>
-                                    </li>
+                                                <span>{category.name}</span>
+                                                <span
+                                                    className={`transition-transform duration-300 ${
+                                                        hoveredCategory === category.id
+                                                            ? "rotate-180 text-orange-500"
+                                                            : "text-gray-400"
+                                                    }`}
+                                                >
+                                                    ▼
+                                                </span>
+                                            </button>
+                                        </li>
 
-                                    {/* Sub-items (Types and Brands) */}
-                                    {hoveredCategory === category.id && (
-                                        <>
-                                            {category.types?.map((type) => (
-                                                <li key={`type-${type.id}`} className="pl-8">
-                                                    <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] text-gray-600">
-                                                        {type.name}
-                                                    </button>
-                                                </li>
-                                            ))}
-
-                                            {category.brands?.map((brand) => (
-                                                <React.Fragment key={`brand-${brand.id}`}>
-                                                    <li className="pl-8">
-                                                        <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700">
-                                                            {brand.name}
-                                                        </button>
-                                                    </li>
-                                                    {brand.types?.map((type) => (
-                                                        <li key={`brand-type-${type.id}`} className="pl-12">
-                                                            <button className="w-full text-left px-4 py-1 hover:bg-gray-100 text-[13px] text-gray-500">
-                                                                {type.name}
+                                        {hoveredCategory === category.id && (
+                                            <>
+                                                {/* Render subcategories if they exist */}
+                                                {category.subcategories?.map((subcategory) => (
+                                                    <React.Fragment key={`subcategory-${subcategory.id}`}>
+                                                        <li className="pl-8">
+                                                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700">
+                                                                {subcategory.name}
                                                             </button>
                                                         </li>
-                                                    ))}
-                                                </React.Fragment>
-                                            ))}
-                                        </>
-                                    )}
-                                </React.Fragment>
-                            ))}
-                        </ul>
-                    </div>
-                )}
+                                                        {/* Render brands under each subcategory */}
+                                                        {subcategory.brands?.map((brand) => (
+                                                            <li key={`subcategory-brand-${brand.id}`} className="pl-12">
+                                                                <button className="w-full text-left px-4 py-1 hover:bg-gray-100 text-[13px] text-gray-500">
+                                                                    {brand.name}
+                                                                </button>
+                                                            </li>
+                                                        ))}
+                                                    </React.Fragment>
+                                                ))}
 
-                {activeTab === "menu" && (
-                    <div className="max-h-[calc(100vh-56px)] overflow-y-auto p-4">
-                        <ul className="space-y-3">
-                            <li className="py-1">Home</li>
-                            <li className="py-1">Brands</li>
-                        </ul>
-                    </div>
-                )}
-            </div>
+                                                {/* Render standalone brands if no subcategories exist */}
+                                                {(!category.subcategories || category.subcategories.length === 0) &&
+                                                    category.brands?.map((brand) => (
+                                                        <li key={`brand-${brand.id}`} className="pl-8">
+                                                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700">
+                                                                {brand.name}
+                                                            </button>
+                                                        </li>
+                                                    ))
+                                                }
+                                            </>
+                                        )}
+                                    </React.Fragment>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    {activeTab === "menu" && (
+                        <div className="p-4">
+                            <ul className="space-y-3">
+                                {menuItems.map((item, index) => (
+                                    <li className="py-2">
+                                    <Link
+                                        key={index}
+                                        to={item.to}
+                                        className="pb-[2px] border-b-2 border-transparent hover:border-orange-300 transition duration-200 cursor-pointer"
+                                    >
+                                        {item.name}
+                                    </Link>
+                                        <hr/>
+                                    </li>
+
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+            </>
         );
     }
 
-    // Desktop render (original functionality - unchanged)
+    // ✅ ✅ ✅ DESKTOP RENDER
     return (
         <>
             {open && (
@@ -151,15 +173,14 @@ export default function MegaMenu({open, setOpen}) {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 className={`bg-white shadow-lg border-r h-screen z-50 transition-all duration-200 ease-in-out
-          ${open ? "w-64 fixed top-0 left-0" : "w-16 fixed top-0 left-0"}
-        `}
+                ${open ? "w-64 fixed top-0 left-0" : "w-16 fixed top-0 left-0"}`}
             >
                 <div
                     className="flex items-center justify-between p-4 bg-orange-500 text-white font-bold cursor-pointer"
                 >
-                  <span className={`${open ? "block" : "hidden"} transition-all overflow-hidden whitespace-nowrap`}>
-                    All Categories
-                  </span>
+                    <span className={`${open ? "block" : "hidden"} transition-all overflow-hidden whitespace-nowrap`}>
+                        All Categories
+                    </span>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -182,8 +203,7 @@ export default function MegaMenu({open, setOpen}) {
                         >
                             <button
                                 className={`w-full text-left px-4 py-3 flex items-center gap-2 hover:bg-gray-100 text-[14px] font-normal
-                  ${hoveredCategory === category.id ? "text-orange-500" : "text-gray-700"}
-                `}
+                                    ${hoveredCategory === category.id ? "text-orange-500" : "text-gray-700"}`}
                             >
                                 {category.icon && (
                                     <img
@@ -208,38 +228,52 @@ export default function MegaMenu({open, setOpen}) {
                                     }}
                                 >
                                     <div className="flex flex-col p-4 h-full">
-                                        {category.types?.length > 0 && (
+                                        {/* Render subcategories if they exist */}
+                                        {category.subcategories?.length > 0 && (
                                             <div className="mb-4">
-                                                <div className="text-[15px] font-medium text-gray-800 mb-2">Types</div>
                                                 <ul className="pl-2 text-[14px] font-normal text-gray-600">
-                                                    {category.types.map((type) => (
-                                                        <li key={type.id} className="py-1">
-                                                            {type.name}
-                                                        </li>
+                                                    {category.subcategories.map((subcategory) => (
+                                                        <div key={subcategory.id} className="mb-3">
+                                                            <div className="font-medium text-gray-700 py-1">
+                                                                {subcategory.name}
+                                                            </div>
+                                                            {/* Render brands under each subcategory */}
+                                                            {subcategory.brands?.length > 0 && (
+                                                                <ul className="pl-2">
+                                                                    {subcategory.brands.map((brand) => (
+                                                                        <li key={brand.id} className="py-1 text-gray-500">
+                                                                            {brand.name}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                        </div>
                                                     ))}
                                                 </ul>
                                             </div>
                                         )}
 
-                                        {category.brands?.length > 0 &&
-                                            category.brands.map((brand) => (
-                                                <div key={brand.id} className="mb-4">
-                                                    <div className="text-[15px] font-medium text-gray-800">{brand.name}</div>
-                                                    {brand.types?.length > 0 && (
-                                                        <ul className="pl-4 text-[14px] font-normal text-gray-600">
-                                                            {brand.types.map((type) => (
-                                                                <li key={type.id} className="py-1">
-                                                                    {type.name}
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    )}
+                                        {/* Render standalone brands if no subcategories exist */}
+                                        {(!category.subcategories || category.subcategories.length === 0) &&
+                                            category.brands?.length > 0 && (
+                                                <div className="mb-4">
+                                                    <ul className="pl-2 text-[14px] font-normal text-gray-600">
+                                                        {category.brands.map((brand) => (
+                                                            <li key={brand.id} className="font-medium text-gray-700 py-1">
+                                                                {brand.name}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
                                                 </div>
-                                            ))}
+                                            )
+                                        }
 
-                                        {!category.types?.length && !category.brands?.length && (
-                                            <div className="text-gray-500 italic">No items available</div>
-                                        )}
+                                        {/* Show message if no content */}
+                                        {(!category.subcategories || category.subcategories.length === 0) &&
+                                            (!category.brands || category.brands.length === 0) && (
+                                                <div className="text-gray-500 italic">No items available</div>
+                                            )
+                                        }
                                     </div>
                                 </div>
                             )}

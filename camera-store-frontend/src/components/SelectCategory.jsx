@@ -1,76 +1,119 @@
-import { useState, useEffect, useRef } from "react";
-
-const rawCategories = [
-  "Accessories", "Bags", "Battery & Adapter", "Battery Grip", "Cables", "Charger", "Chroma",
-  "Color Checkers", "Screens", "Feelworld", "Viltrox", "SoftBox", "Teleprompters", "Camera",
-  "accessories", "Action", "DJI", "GoPro", "DSLR", "Canon", "Mirrorless", "Canon", "Sony",
-  "Lens", "accessories", "Canon", "EF & EF-S", "RF & RF-S", "Filters", "CPL", "ND", "UV",
-  "LENS HOOD", "SIGMA", "Sony", "Tamron", "Lights", "Compact", "Tolifo", "Yungnou", "Flash",
-  "Meike", "RingFlash & Twin Flash", "Heads", "COLBOR", "Godox", "Nanlite", "NiceFoto",
-  "Tolifo", "Panel", "Falcon", "Selepro", "Tolifo", "RingLight", "Falcon", "Tolifo", "Stands",
-  "Tubes", "Nanlite", "Tolifo", "Memory", "CF Express", "Reader", "SD", "Lexar", "SanDisk",
-  "Microphone", "condenser", "Boya", "Jmary", "RODE", "Samson", "Saramonic", "Recorder",
-  "ZOOM", "Shotgun", "Boya", "Comica", "LensGo", "RODE", "Saramonic", "Stands", "Wire",
-  "Boya", "Saramonic", "Wireless", "Compact", "7ryms", "Boya", "DJI", "Hollyland", "LensGo",
-  "RODE", "Saramonic", "professional", "Boya", "RODE", "Saramonic", "Sennheiser", "Printer",
-  "Brother", "Canon", "professional Video Camera", "BlackMagic", "Canon", "stabilizer", "DJI",
-  "hohem", "Tripods", "Jmary", "Manfrotto", "miliboo", "Sliders", "Velbon", "Weifeng",
-  "Yunteng", "Video Mixers"
-];
+import React, { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
+import categoriesData from "../data/megaMenu.json";
 
 const SelectCategory = ({ selected, setSelected }) => {
-  const [open, setOpen] = useState(false);
-  const dropdownRef = useRef();
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef();
+    const buttonRef = useRef();
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target) &&
+                !buttonRef.current.contains(event.target)
+            ) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const handleCategoryClick = (categoryName, subcategoryName = null) => {
+        const selection = subcategoryName ? `${categoryName} > ${subcategoryName}` : categoryName;
+        setSelected(selection);
         setOpen(false);
-      }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
-  const getDropdownList = () => {
-    const list = [...rawCategories];
-    if (selected && selected !== "SELECT CATEGORY") {
-      return ["SELECT CATEGORY", ...list];
-    }
-    return list;
-  };
+    // Flatten all categories and subcategories into a single list
+    const getCategoryList = () => {
+        const result = [];
+        categoriesData.forEach(category => {
+            // Add main category
+            result.push({
+                id: category.id,
+                name: category.name,
+                type: 'category'
+            });
 
-  return (
-    <div className="relative w-full text-sm z-50" ref={dropdownRef}>
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full border-l border-orange-300 px-3 py-2 text-left bg-white text-gray-600 truncate"
-      >
-        {selected || "SELECT CATEGORY"}
-      </button>
+            // Add subcategories if they exist
+            if (category.subcategories && category.subcategories.length > 0) {
+                category.subcategories.forEach(subcategory => {
+                    result.push({
+                        id: subcategory.id,
+                        name: subcategory.name,
+                        type: 'subcategory',
+                        parentName: category.name
+                    });
+                });
+            }
+        });
+        return result;
+    };
 
-      {open && (
-        <ul className="absolute left-0 right-0 bg-white border border-orange-300 rounded mt-1 max-h-60 overflow-y-auto w-full shadow-lg z-[999] text-sm">
-          {getDropdownList()
-            .filter((cat) => !(selected === "SELECT CATEGORY" && cat === "SELECT CATEGORY"))
-            .map((cat, idx) => (
-              <li
-                key={idx}
-                onClick={() => {
-                  setSelected(cat);
-                  setOpen(false);
+    const categoryList = getCategoryList();
+
+    // Render the dropdown menu
+    const dropdown = open && buttonRef.current
+        ? ReactDOM.createPortal(
+            <div
+                ref={dropdownRef}
+                className="absolute bg-white border border-orange-300 rounded-md mt-1 shadow-lg w-full max-h-60 overflow-y-auto"
+                style={{
+                    position: "absolute",
+                    top: buttonRef.current.getBoundingClientRect().bottom + window.scrollY,
+                    left: buttonRef.current.getBoundingClientRect().left,
+                    width: buttonRef.current.offsetWidth,
+                    zIndex: 9999,
                 }}
-                className={`px-3 py-2 hover:bg-orange-100 cursor-pointer ${
-                  cat === selected ? "bg-orange-50 font-semibold" : ""
+            >
+                <ul className="py-1">
+                    <li className="px-3 py-2 text-sm font-medium text-gray-500 border-b border-orange-100">
+                        SELECT CATEGORY
+                    </li>
+                    {categoryList.map((item) => (
+                        <li
+                            key={item.id}
+                            className={`px-3 py-2 text-sm cursor-pointer transition-colors duration-150 ${
+                                item.type === 'category'
+                                    ? 'font-medium text-gray-900 hover:bg-orange-50'
+                                    : 'pl-6 text-gray-600 hover:bg-orange-50'
+                            } ${
+                                selected === item.name ||
+                                (item.type === 'subcategory' && selected === `${item.parentName} > ${item.name}`)
+                                    ? 'bg-orange-100 text-orange-600'
+                                    : ''
+                            }`}
+                            onClick={() => handleCategoryClick(
+                                item.type === 'category' ? item.name : item.parentName,
+                                item.type === 'subcategory' ? item.name : null
+                            )}
+                        >
+                            {item.type === 'subcategory' && '• '}{item.name}
+                        </li>
+                    ))}
+                </ul>
+            </div>,
+            document.getElementById("dropdown-root")
+        )
+        : null;
+
+    return (
+        <>
+            <button
+                ref={buttonRef}
+                onClick={() => setOpen(!open)}
+                className={`w-full border border-orange-300 rounded-md px-3 py-2 text-left bg-white text-gray-700 text-sm focus:outline-none focus:ring-1 focus:ring-orange-500 transition-colors duration-150 ${
+                    open ? 'ring-1 ring-orange-500' : ''
                 }`}
-              >
-                {cat}
-              </li>
-            ))}
-        </ul>
-      )}
-    </div>
-  );
+            >
+                {selected || "SELECT CATEGORY"}
+            </button>
+            {dropdown}
+        </>
+    );
 };
 
 export default SelectCategory;

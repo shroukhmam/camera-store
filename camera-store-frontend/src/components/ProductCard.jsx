@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaCheck, FaHeart, FaSearch, FaBalanceScale, FaShoppingCart } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
+import {Link} from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const hasPriceRange = product.price_range;
@@ -21,7 +22,7 @@ const ProductCard = ({ product }) => {
         id: product.id,
         name: `${product.name} - ${selectedOption.label}`,
         price: selectedOption.price,
-        image: product.image,
+        image: Array.isArray(product.images) ? product.images[0] : product.images,
         sku: selectedOption.sku,
         quantity: 1,
         link: `/product/${product.id}`,
@@ -32,7 +33,7 @@ const ProductCard = ({ product }) => {
         id: product.id,
         name: product.name,
         price: product.sale_price || product.price,
-        image: product.image,
+        image: Array.isArray(product.images) ? product.images[0] : product.images,
         sku: product.sku,
         quantity: 1,
         link: `/product/${product.id}`,
@@ -43,7 +44,11 @@ const ProductCard = ({ product }) => {
   return (
       <div className="relative group bg-white p-4 rounded-xl shadow-md h-full flex flex-col hover:shadow-lg transition-all duration-300">
         <div className="relative flex-grow">
-          <img src={product.image} alt={product.name} className="w-full h-48 object-contain mx-auto" />
+          <img
+              src={Array.isArray(product.images) ? product.images[0] : product.images}
+              alt={product.name}
+              className="w-full h-48 object-contain mx-auto"
+          />
           {product.discount && (
               <span className="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 text-sm rounded-full">
             {product.discount}
@@ -57,8 +62,12 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="mt-4">
-          <h3 className="text-md font-bold line-clamp-2">{product.name}</h3>
-          {product.category && <p className="text-sm text-gray-500 line-clamp-1">{product.category.join(", ")}</p>}
+          <h3 className="text-md font-bold line-clamp-2"><Link to={`/product/${product.id}`}>{product.name}</Link></h3>
+          {(product.category || product.subcategory || product.brand) && (
+              <p className="text-sm text-gray-500 line-clamp-1">
+                {[product.category, product.subcategory, product.brand].filter(Boolean).join(" / ")}
+              </p>
+          )}
           {product.stock && (
               <div className="flex items-center text-green-600 text-sm mt-1">
                 <FaCheck className="mr-1" /> {product.stock}
@@ -67,14 +76,15 @@ const ProductCard = ({ product }) => {
 
           {hasPriceRange ? (
               <p className="text-orange-500 text-md mt-1">
-                {product.price_range.min} – {product.price_range.max}
+                Range <br/>
+                {product.price_range.min} EGP – {product.price_range.max} EGP
               </p>
           ) : (
               <>
                 {product.original_price && (
                     <p className="text-gray-400 line-through text-sm mt-1">{product.original_price}</p>
                 )}
-                <p className="text-orange-500 text-md">{product.sale_price || product.price}</p>
+                <p className="text-orange-500 text-md">{product.sale_price || product.price} EGP</p>
               </>
           )}
 

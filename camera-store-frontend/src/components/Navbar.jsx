@@ -26,7 +26,8 @@ const Navbar = () => {
       <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-normal">
         {/* Settings Icon (show only on small screens) */}
         <button className="text-gray-600 hover:text-orange-600 transition-colors md:hidden">
-          <FaCog className="text-xl" />
+          {/*<FaCog className="text-xl" />*/}
+
         </button>
 
         {/* Logo */}
@@ -53,10 +54,10 @@ const Navbar = () => {
             className="flex-1 px-3 py-2 outline-none text-sm text-gray-700 bg-transparent"
           />
 
-          <div className="w-[150px] md:w-[180px]">
+          <div className="w-full max-w-[150px] md:max-w-[180px] hidden md:block">
             <SelectCategory
-              selected={selectedCategory}
-              setSelected={setSelectedCategory}
+                selected={selectedCategory}
+                setSelected={setSelectedCategory}
             />
           </div>
 
@@ -70,7 +71,21 @@ const Navbar = () => {
       </div>
 
       {/* Empty div for spacing on desktop */}
-      <div className="hidden md:block w-[60px]"></div>
+      <div className="hidden md:block ">
+          <div className="flex flex-col md:flex-row items-center  text-black">
+            <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
+              <p className="text-sm">Your Support</p>
+              <p className="text-sm text-orange-500">+20023924362</p>
+            </div>
+
+            <div className="hidden md:block w-px h-8 bg-orange-400 mx-4"></div>
+
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-sm">Worldwide</p>
+              <p className="text-sm text-orange-500">Shipping</p>
+            </div>
+          </div>
+      </div>
 
       <ToastContainer position="top-center" />
     </div>
