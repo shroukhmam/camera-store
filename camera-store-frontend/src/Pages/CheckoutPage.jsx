@@ -58,10 +58,7 @@ const CheckoutPage = () => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="mb-6">
-                <h1 className="text-2xl font-bold">SHOPPING CART → CHECKOUT → ORDER COMPLETE</h1>
-            </div>
-
+          
             <div className="flex flex-col lg:flex-row gap-8">
                 {/* Billing Details Section */}
                 <div className="lg:w-2/3">

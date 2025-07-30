@@ -44,16 +44,46 @@ const ProductCard = ({ product }) => {
   return (
     <div className="relative group bg-white p-4 rounded-xl shadow-md h-full flex flex-col hover:shadow-lg transition-all duration-300">
       <div className="relative flex-grow">
+        {/* NEW Badge */}
+      
+
+
+{(product?.new === "1" || product?.new === 1 || product?.isNew) && (
+  <div
+    style={{
+      position: "absolute",
+      top: "10px",
+      left: "10px",
+      backgroundColor: "#16a34a", // لون أخضر داكن
+      color: "white",
+      fontSize: "11px",
+      fontWeight: "bold",
+      width: "40px",
+      height: "40px",
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      zIndex: 10,
+      boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+    }}
+  >
+    NEW
+  </div>
+)}
+
         <img
           src={Array.isArray(product.images) ? product.images[0] : product.images}
           alt={product.name}
           className="w-full h-48 object-contain mx-auto"
         />
+
         {product.discount && (
           <span className="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 text-sm rounded-full">
             {product.discount}
           </span>
         )}
+
         <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition">
           {/* Compare Button */}
           <div className="relative group/compare">
