@@ -11,7 +11,7 @@ import AccountPage from "./Pages/AccountPage.jsx";
 import ForgetPassword from "./Pages/ForgetPassword.jsx";
 import Contact from "./Pages/Contact.jsx";
 import Brands from "./Pages/Brands.jsx";
-import Outlet from "./Pages/outlet.jsx";
+import Outlet from "./Pages/Outlet.jsx";
 import Exclusives from "./Pages/Exclusives.jsx";
 import Promotions from "./Pages/Promotions.jsx";
 import Store from "./Pages/Store.jsx";

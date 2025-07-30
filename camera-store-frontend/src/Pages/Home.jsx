@@ -40,7 +40,6 @@ export default function Home({ onAddToCart }) {
             <ProductCarousel products={lightProducts} nameSection="Lights......" onAddToCart={onAddToCart} />
             <Type />
             <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
-
             <Release />
 
         </>
