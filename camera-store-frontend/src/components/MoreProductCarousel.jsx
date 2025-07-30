@@ -22,25 +22,47 @@ const MoreProductCarousel = ({ products = [] }) => {
 
     // Helper function to parse price strings into numbers
     const parsePrice = (priceStr) => {
-        if (!priceStr) return 0;
+        if (priceStr === null || priceStr === undefined) return 0;
         const cleaned = String(priceStr)
             .replace(/\./g, '')
             .replace(',', '.');
         return parseFloat(cleaned) || 0;
     };
 
-    // Get the effective price for a product
+    // Get the effective price for a product with proper null checks
     const getProductPrice = (product) => {
-        if (product.sale_price) return parsePrice(product.sale_price);
-        if (product.price) return parsePrice(product.price);
-        if (product.price_range?.max) return parsePrice(product.price_range.max);
-        if (product.original_price) return parsePrice(product.original_price);
+        if (!product) return 0;
+
+        // Check each price property with proper existence checks
+        if (product.hasOwnProperty('sale_price') && product.sale_price !== null) {
+            return parsePrice(product.sale_price);
+        }
+
+        if (product.hasOwnProperty('price') && product.price !== null) {
+            return parsePrice(product.price);
+        }
+
+        if (product.price_range && product.price_range.max) {
+            return parsePrice(product.price_range.max);
+        }
+
+        if (product.hasOwnProperty('original_price') && product.original_price !== null) {
+            return parsePrice(product.original_price);
+        }
+
         return 0;
     };
 
     useEffect(() => {
         if (products.length > 0) {
-            const prices = products.map(getProductPrice);
+            const prices = products.map(p => {
+                try {
+                    return getProductPrice(p);
+                } catch (error) {
+                    console.error("Error getting product price:", error);
+                    return 0;
+                }
+            });
             const calculatedMax = Math.max(...prices);
             setMaxPrice(calculatedMax);
             setPriceRange([0, calculatedMax]);
@@ -48,6 +70,7 @@ const MoreProductCarousel = ({ products = [] }) => {
         setFilteredProducts(products);
     }, [products]);
 
+    // ... rest of your component remains the same ...
     const handleMinPriceChange = (e) => {
         const newMin = Math.min(Number(e.target.value), priceRange[1]);
         setPriceRange([newMin, priceRange[1]]);
@@ -61,8 +84,13 @@ const MoreProductCarousel = ({ products = [] }) => {
     const handleFilter = () => {
         const filtered = products.filter(product => {
             if (!product) return false;
-            const price = getProductPrice(product);
-            return price >= priceRange[0] && price <= priceRange[1];
+            try {
+                const price = getProductPrice(product);
+                return price >= priceRange[0] && price <= priceRange[1];
+            } catch (error) {
+                console.error("Error filtering product:", error);
+                return false;
+            }
         });
         setFilteredProducts(filtered);
     };

@@ -23,7 +23,7 @@ function LayoutWrapper() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     // ✅ تحديد إن كنا على صفحة brands
-    const isBrandsPage = location.pathname === "/brand";
+    const isBrandsPage = location.pathname === "/brand" || location.pathname === "/promotions";
 
     return (
         <div className="App">
