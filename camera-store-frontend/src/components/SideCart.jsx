@@ -1,6 +1,7 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const SideCart = () => {
     const { isCartOpen, setIsCartOpen, cartItems, updateQuantity, removeItem } = useCart();
@@ -27,13 +28,13 @@ const SideCart = () => {
                     <ul className="space-y-4">
                         {cartItems.map((item, idx) => (
                             <li key={idx} className="flex space-x-4 border-b pb-4">
-                                <a href={item.link}>
+                                <Link to={item.link}>
                                     <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
-                                </a>
+                                </Link>
                                 <div className="flex-1">
-                                    <a href={item.link} className="font-semibold text-gray-700 hover:text-orange-500 block">
+                                    <Link to={item.link} className="font-semibold text-gray-700 hover:text-orange-500 block">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                     {item.selectedOption && (
                                         <div className="text-xs text-gray-500">Option: {item.selectedOption}</div>
                                     )}
@@ -70,8 +71,12 @@ const SideCart = () => {
                     <span className="text-orange-600 font-semibold">{subtotal.toLocaleString()} EGP</span>
                 </p>
                 <div className="flex space-x-2">
-                    <a href="/cart" className="flex-1 text-center bg-gray-200 py-2 rounded hover:bg-gray-300">View cart</a>
-                    <a href="/checkout" className="flex-1 text-center bg-orange-500 text-white py-2 rounded hover:bg-orange-600">Checkout</a>
+                    <Link to="/cart" className="flex-1 text-center bg-gray-200 py-2 rounded hover:bg-gray-300">
+                        View cart
+                    </Link>
+                    <Link to="/checkout" className="flex-1 text-center bg-orange-500 text-white py-2 rounded hover:bg-orange-600">
+                        Checkout
+                    </Link>
                 </div>
             </div>
         </div>

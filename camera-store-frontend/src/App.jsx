@@ -14,6 +14,9 @@ import Brands from "./Pages/Brands.jsx";
 import Outlet from "./Pages/Outlet.jsx";
 import Exclusives from "./Pages/Exclusives.jsx";
 import Promotions from "./Pages/Promotions.jsx";
+import CartPage from "./Pages/CartPage.jsx";
+import CheckoutPage from "./Pages/CheckoutPage.jsx";
+
 import Store from "./Pages/Store.jsx";
 import CategoryPage from "./Pages/CategoryPage.jsx";
 import BrandPage from "./Pages/BrandPage.jsx";
@@ -55,6 +58,8 @@ function LayoutWrapper() {
                     <Route path="/exclusives" element={<Exclusives />} />
                     <Route path="/promotions" element={<Promotions />} />
                     <Route path="/product/:id" element={<ProductPage />} />
+                    <Route path="/cart" element={<CartPage />} />
+                    <Route path="/checkout" element={<CheckoutPage />} />
                     <Route path="/category/:id" element={<CategoryPage />} />
                     <Route path="/brand/:name" element={<BrandPage />} />
 
