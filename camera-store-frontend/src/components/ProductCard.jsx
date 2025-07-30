@@ -71,7 +71,6 @@ const ProductCard = ({ product }) => {
     NEW
   </div>
 )}
-
         <img
           src={Array.isArray(product.images) ? product.images[0] : product.images}
           alt={product.name}
