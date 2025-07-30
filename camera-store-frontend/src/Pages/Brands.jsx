@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import brandsData from '../data/brands.json';
 
 const Brands = () => {
   const [tooltip, setTooltip] = useState({ visible: false, name: '', x: 0, y: 0 });
+  const hoverTimeoutRef = useRef(null); // لتخزين مؤقت التأخير
 
   const showTooltip = (e, name) => {
-    const x = e.clientX;
-    const y = e.clientY;
-    setTooltip({ visible: true, name, x, y });
+    // إلغاء أي مؤقت سابق (إذا كان هناك)
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+
+    // تأخير ظهور الـ Tooltip لمدة 1 ثانية (1000 مللي ثانية)
+    hoverTimeoutRef.current = setTimeout(() => {
+      const x = e.clientX;
+      const y = e.clientY;
+      setTooltip({ visible: true, name, x, y });
+    }, 1000); // ⏳ التعديل هنا: 1000ms = 1 ثانية
   };
 
   const hideTooltip = () => {
+    // إلغاء المؤقت إذا تم إبعاد الماوس قبل انتهاء الوقت
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
     setTooltip({ visible: false, name: '', x: 0, y: 0 });
   };
 
   return (
-<div className="w-full px-[120px] pt-3 pb-10 relative">
+    <div className="w-full px-[120px] pt-3 pb-10 relative">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-5">
         {brandsData.map((brand) => (
           <div
@@ -27,9 +41,8 @@ const Brands = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full h-full flex items-center justify-center"
-              onMouseEnter={(e) => showTooltip(e, brand.name)}
-              onMouseMove={(e) => showTooltip(e, brand.name)}
-              onMouseLeave={hideTooltip}
+              onMouseEnter={(e) => showTooltip(e, brand.name)} // بدء المؤقت عند الهوفر
+              onMouseLeave={hideTooltip} // إخفاء الـ Tooltip وإلغاء المؤقت
             >
               <img
                 src={brand.img}
@@ -46,10 +59,10 @@ const Brands = () => {
         ))}
       </div>
 
-      {/* Tooltip */}
+      {/* Tooltip يظهر بعد 1 ثانية من الوقوف بالماوس */}
       {tooltip.visible && (
         <div
-          className="fixed z-50 bg-white text-gray-800 text-xs px-2 py-1 rounded shadow-md pointer-events-none"
+          className="fixed z-50 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-md shadow-lg pointer-events-none"
           style={{
             top: tooltip.y + 15,
             left: tooltip.x + 10,
