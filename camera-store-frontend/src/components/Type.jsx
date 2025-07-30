@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import productsData from '../data/type.json';
+import categoriesData from "../data/CategoryProduct.json";
+import ProductCard from "./ProductCard.jsx";
+import SideCart from "./SideCart.jsx";
 
 const Type = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
-  const [showHeart, setShowHeart] = useState(false);
-  const [isHeartFilled, setIsHeartFilled] = useState(false);
   const [showCartConfirm, setShowCartConfirm] = useState(false);
-  const [showArrows, setShowArrows] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const [hoveredFirstCard, setHoveredFirstCard] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [currentFirstCardImageIndex, setCurrentFirstCardImageIndex] = useState(0);
-  const { products } = productsData;
+
+  const products = categoriesData.categories.flatMap(category =>
+      category.products?.filter(product =>
+          product.new
+      ) || []
+  );
 
   const firstCardImages = [
     "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
@@ -40,14 +43,6 @@ const Type = () => {
 
   const prevFirstCardImage = () => {
     setCurrentFirstCardImageIndex((prev) => (prev - 1 + firstCardImages.length) % firstCardImages.length);
-  };
-
-  const handleAddToCart = () => {
-    setShowCartConfirm(true);
-  };
-
-  const toggleHeart = () => {
-    setIsHeartFilled(!isHeartFilled);
   };
 
   useEffect(() => {
@@ -101,40 +96,6 @@ const Type = () => {
         </div>
 
         {/* RIGHT CARD */}
-        <div 
-          className="w-full lg:w-1/4 mt-8 lg:mt-0 relative"
-          onMouseEnter={() => {
-            setShowHeart(true);
-            setShowArrows(true);
-          }}
-          onMouseLeave={() => {
-            setShowHeart(false);
-            setShowArrows(false);
-          }}
-        >
-          {showHeart && (
-            <div 
-              className="absolute -top-3 -right-3 z-10 bg-white p-2 rounded-full shadow-md hover:scale-110 transition-transform cursor-pointer"
-              onClick={toggleHeart}
-            >
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-6 w-6" 
-                fill={isHeartFilled ? "red" : "none"} 
-                viewBox="0 0 24 24" 
-                stroke={isHeartFilled ? "red" : "currentColor"}
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" 
-                />
-              </svg>
-            </div>
-          )}
-
-          {showArrows && (
             <div className="absolute inset-0 flex items-center justify-between px-2 z-10">
               <button 
                 className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
@@ -159,60 +120,10 @@ const Type = () => {
                 </svg>
               </button>
             </div>
-          )}
-
-          <div className="relative bg-white rounded-xl border border-gray-200 shadow-md p-4 hover:shadow-lg transition-shadow">
-            <span className="absolute top-2 left-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow">
-              NEW
-            </span>
-
-            <div className="flex justify-center mt-4 mb-3 h-32">
-              <img
-                src={products[currentProductIndex].image}
-                alt={products[currentProductIndex].name}
-                className="h-full object-contain transition-all duration-300 hover:scale-105"
-              />
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-base font-semibold text-gray-800 mb-1">
-                {products[currentProductIndex].name}
-              </h3>
-              <p className="text-xs text-gray-500 mb-2">{products[currentProductIndex].category}</p>
-              
-              <div className="flex justify-center items-center text-green-600 text-xs mb-2">
-                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                In stock
-              </div>
-
-              <p className="text-xl font-bold text-gray-900 mb-3">{products[currentProductIndex].price}</p>
-
-              <button 
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium py-1.5 rounded-md shadow transition mb-2 flex items-center justify-center gap-2"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                {isHovered ? (
-                  <>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </>
-                ) : (
-                  "Add to Cart"
-                )}
-              </button>
-
-              <p className="text-xs text-gray-400">SKU: {products[currentProductIndex].sku}</p>
-            </div>
+          <div className="relative">
+          <ProductCard product={products[currentProductIndex]} />
+            <SideCart />
           </div>
-        </div>
       </div>
 
       {/* ADDITIONAL CARDS */}
