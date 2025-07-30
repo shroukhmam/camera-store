@@ -14,6 +14,9 @@ import Brands from "./Pages/Brands.jsx";
 import Outlet from "./Pages/outlet.jsx";
 import Exclusives from "./Pages/Exclusives.jsx";
 import Promotions from "./Pages/Promotions.jsx";
+import Store from "./Pages/Store.jsx";
+import CategoryPage from "./Pages/CategoryPage.jsx";
+import BrandPage from "./Pages/BrandPage.jsx";
 // ✅ ملف داخل App لحساب موقعك الحالي
 function LayoutWrapper() {
     const location = useLocation();
@@ -45,16 +48,19 @@ function LayoutWrapper() {
                     <Route path="/login" element={<AccountPage />} />
                     <Route path="/forget-password" element={<ForgetPassword />} />
                     <Route path="/" element={<Home />} />
+                    <Route path="/store" element={<Store />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/brand" element={<Brands />} />
                     <Route path="/outlet" element={<Outlet />} />
                     <Route path="/exclusives" element={<Exclusives />} />
                     <Route path="/promotions" element={<Promotions />} />
                     <Route path="/product/:id" element={<ProductPage />} />
+                    <Route path="/category/:id" element={<CategoryPage />} />
+                    <Route path="/brand/:name" element={<BrandPage />} />
+
                 </Routes>
 
                 {!isBrandsPage && <Footer />}
-                {!isBrandsPage &&   <Link to={`/product/31469`}>test</Link> }
             </div>
         </div>
     );

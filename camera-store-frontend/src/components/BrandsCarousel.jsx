@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import '../styles/BrandsCarousel.css';
+import {Link} from "react-router-dom";
 
 const BrandsCarousel = ({ items }) => {
     const [visibleItemsCount, setVisibleItemsCount] = useState(10);
@@ -87,12 +88,21 @@ const BrandsCarousel = ({ items }) => {
                     {items.map((item, index) => (
                         <SwiperSlide key={`${item.id}-${index}`}>
                             <div className="carousel-item">
+
                                 <img
                                     src={item.img}
                                     alt={item.name}
                                     loading="lazy"
                                 />
-                                <div className="brand-name">{item.name}</div>
+                                <div className="brand-name">
+                                    <Link
+                                    className="wd-fill category-link"
+                                    to={`/brand/${item.name}`}
+                                    aria-label={`Product category ${item.name}`}
+                                    >{item.name}
+                                    </Link>
+                                </div>
+
                             </div>
                         </SwiperSlide>
                     ))}

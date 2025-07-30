@@ -7,16 +7,20 @@ import '../styles/CategoryCarousel.css';
 
 // Import your JSON data (assuming it's in a file called categories.json)
 import categoriesData from '../data/CategoryProduct.json';
+import {Link, useLocation} from "react-router-dom";
 
 const CategoryCarousel = () => {
+    const location = useLocation();
     return (
         <div className="products woocommerce wd-carousel-container wd-cats-element wd-cats">
-            <h2 className="text-[26px] text-[#242424] font-bold mb-6 relative
-               after:content-[''] after:absolute after:bottom-0 after:left-0
-               after:w-20 after:h-0.5 after:bg-orange-500
-               transition-all duration-300 hover:translate-x-1">
-                Popular Categories
-            </h2>
+            {location.pathname === "/" && (
+                <h2 className="text-[26px] text-[#242424] font-bold mb-6 relative
+          after:content-[''] after:absolute after:bottom-0 after:left-0
+          after:w-20 after:h-0.5 after:bg-orange-500
+          transition-all duration-300 hover:translate-x-1">
+                    Popular Categories
+                </h2>
+            )}
             <div className="wd-carousel-inner">
                 <Swiper
                     modules={[Navigation, Autoplay]} // أضفنا Autoplay هنا
@@ -78,11 +82,11 @@ const CategoryCarousel = () => {
                                         </div>
                                     </div>
 
-                                    <a
+                                    <Link
                                         className="wd-fill category-link"
-                                        href={`/product-category/${category.name.toLowerCase()}`}
+                                        to={`/category/${category.id}`}
                                         aria-label={`Product category ${category.name}`}
-                                    ></a>
+                                    ></Link>
                                 </div>
                             </div>
                         </SwiperSlide>

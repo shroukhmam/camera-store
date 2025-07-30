@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import brandsData from '../data/brands.json'; // Adjust the path to your JSON file
 import categoriesData from  '../data/CategoryProduct.json';
+import {Link} from "react-router-dom";
 const Footer = () => {
   return (
       <footer className="bg-gray-50 text-gray-800">
@@ -88,12 +89,13 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {categoriesData.categories.slice(0, 5).map((category, index) => (
                       <li key={index}>
-                        <a
-                            href={category.url}
+                        <Link
                             className="text-gray-600 hover:text-orange-600 transition-colors"
+                            to={`/category/${category.id}`}
+                            aria-label={`Product category ${category.name}`}
                         >
                           {category.name}
-                        </a>
+                        </Link>
                       </li>
                   ))}
                 </ul>
@@ -107,12 +109,13 @@ const Footer = () => {
                 <ul className="space-y-2">
                   {categoriesData.categories.slice(5).map((category, index) => (
                       <li key={index}>
-                        <a
-                            href={category.url}
+                        <Link
                             className="text-gray-600 hover:text-orange-600 transition-colors"
+                            to={`/category/${category.id}`}
+                            aria-label={`Product category ${category.name}`}
                         >
                           {category.name}
-                        </a>
+                        </Link>
                       </li>
                   ))}
                 </ul>

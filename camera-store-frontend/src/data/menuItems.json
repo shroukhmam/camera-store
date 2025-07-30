@@ -1,5 +1,5 @@
 [
-  { "name": "Store", "to": "/" },
+  { "name": "Store", "to": "/store" },
   { "name": "Brands", "to": "/brand" },
   { "name": "Outlet", "to": "/outlet" },
   { "name": "EXCLUSIVES", "to": "/exclusives" },
