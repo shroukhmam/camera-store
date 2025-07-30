@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import productsData from '../data/type.json';
 
-const DJIProducts = () => {
+const Type = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
   const [showHeart, setShowHeart] = useState(false);
   const [isHeartFilled, setIsHeartFilled] = useState(false);
@@ -14,9 +14,9 @@ const DJIProducts = () => {
   const { products } = productsData;
 
   const firstCardImages = [
-    "https://camerashop.com.eg/wp-content/uploads/2025/03/colbor_w100_banner_new_web.png",
-    "https://camerashop.com.eg/wp-content/uploads/2025/03/gk-panel-700b-bi-color-light-panel-866084-1.png",
-    "https://cdn.mos.cms.futurecdn.net/ZSCuWCMACUXWRW7AGwm9JG.jpg"
+    "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+    "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
+    "https://images.unsplash.com/photo-1564466809058-bf4114d55352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1280&q=80",
   ];
 
   useEffect(() => {
@@ -225,7 +225,7 @@ const DJIProducts = () => {
         >
           <img
             src={firstCardImages[currentFirstCardImageIndex]}
-            alt="Colbor W100"
+            alt="Professional Camera"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {hoveredFirstCard && (
@@ -255,8 +255,8 @@ const DJIProducts = () => {
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-xl mb-1">Colbor W100</h3>
-            <p className="text-gray-300 text-sm mb-3">Professional LED Light Panel</p>
+            <h3 className="text-white font-bold text-xl mb-1">Professional Cameras</h3>
+            <p className="text-gray-300 text-sm mb-3">High-end photography equipment</p>
             <div className="flex justify-between items-center">
               <p className="text-orange-400 font-bold text-2xl">9,500 EGP</p>
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
@@ -266,7 +266,6 @@ const DJIProducts = () => {
           </div>
         </div>
 
-        {/* Card 2 - بدون سهمي التنقل */}
         <div className="relative group overflow-hidden rounded-xl h-80">
           <img
             src="https://camerashop.com.eg/wp-content/uploads/2025/03/gk-panel-700b-bi-color-light-panel-866084-1.png"
@@ -285,28 +284,26 @@ const DJIProducts = () => {
           </div>
         </div>
 
-        {/* Card 3 - صورة فقط بدون محتوى نصي */}
         <div className="relative group overflow-hidden rounded-xl h-80">
-        
-        <img
-  src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39" 
-          alt="Camera"
-          className="w-full h-auto rounded-md hover:scale-105 transition-transform duration-300"
-        />
+          <img
+            src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39"
+            alt="Camera and Audio Gear"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-xl mb-1">GK Panel 700B</h3>
-            <p className="text-gray-300 text-sm mb-3">Bi-color LED Light Panel</p>
+            <h3 className="text-white font-bold text-xl mb-1">Camera & Audio</h3>
+            <p className="text-gray-300 text-sm mb-3">Professional Recording Kit</p>
             <div className="flex justify-between items-center">
-              <p className="text-orange-400 font-bold text-2xl">12,000 EGP</p>
+              <p className="text-orange-400 font-bold text-2xl">15,000 EGP</p>
               <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
                 Add to Cart
               </button>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   );
 };
 
-export default DJIProducts;
+export default Type;

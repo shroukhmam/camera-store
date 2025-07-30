@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import productsData from '../data/products.json';
 
-const SaramonicSlider = () => {
+const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const products = productsData.products;
@@ -143,4 +143,4 @@ const SaramonicSlider = () => {
   );
 };
 
-export default SaramonicSlider;
+export default Slider;

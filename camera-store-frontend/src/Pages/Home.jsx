@@ -5,6 +5,7 @@ import ProductCarousel from "../components/ProductCarousel.jsx";
 import brandsData from "../data/brands.json";
 import Slider from "../components/Slider.jsx";
 import Type from "../components/Type.jsx";
+import Release from "../components/Release.jsx";
 import categoriesData from "../data/CategoryProduct.json";
 
 export default function Home({ onAddToCart }) {
@@ -39,6 +40,8 @@ export default function Home({ onAddToCart }) {
             <ProductCarousel products={lightProducts} nameSection="Lights......" onAddToCart={onAddToCart} />
             <Type />
             <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
+
+            <Release />
 
         </>
     );

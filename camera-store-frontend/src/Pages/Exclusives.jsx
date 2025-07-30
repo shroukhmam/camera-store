@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
-const CombinedSliders = () => {
+const Exclusives = () => {
   return (
     <div className="w-full space-y-8 py-8"> {/* Added vertical spacing */}
       {/* First Row - First slider takes full width */}
@@ -579,4 +579,4 @@ const Slider4 = () => {
   );
 };
 
-export default CombinedSliders;
+export default Exclusives;
