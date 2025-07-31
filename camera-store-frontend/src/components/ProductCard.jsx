@@ -96,7 +96,7 @@ const ProductCard = ({ product }) => {
           <div className="relative group/compare">
             <button
               className={`bg-white p-3 w-full text-orange-500 hover:bg-orange-100 hover:scale-110 transform transition-transform duration-300 ${
-                inCompare ? "text-green-600" : ""
+                inCompare ? "text-orange-600" : ""
               }`}
               onClick={() => toggleCompare(product)}
               aria-label={inCompare ? "Remove from Compare" : "Add to Compare"}
@@ -122,7 +122,7 @@ const ProductCard = ({ product }) => {
           <div className="relative group/wishlist">
             <button
               className={`bg-white p-3 w-full text-orange-500 hover:bg-orange-100 hover:scale-110 transform transition-transform duration-300 ${
-                inWishlist ? "text-red-600" : ""
+                inWishlist ? "text-orange-600" : ""
               }`}
               onClick={() => toggleWishlist(product)}
               aria-label={inWishlist ? "Remove from Wishlist" : "Add to Wishlist"}
@@ -146,7 +146,7 @@ const ProductCard = ({ product }) => {
           </p>
         )}
         {product.stock && (
-          <div className="flex items-center text-green-600 text-sm mt-1 font-medium">
+          <div className="flex items-center text-orange-600 text-sm mt-1 font-medium">
             <FaCheck className="mr-1" />{" "}
             {product.stock.includes("Out of Stock") ? "Out of Stock" : "In Stock"}
           </div>

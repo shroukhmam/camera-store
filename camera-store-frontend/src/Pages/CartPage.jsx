@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import categoriesData from "../data/CategoryProduct.json";
+import ProductCarousel from "../components/ProductCarousel";
 
 const CartPage = () => {
     const { cartItems, updateQuantity, removeItem } = useCart();
@@ -11,6 +13,11 @@ const CartPage = () => {
 
     const [showAddressForm, setShowAddressForm] = useState(false);
     const [shippingMethod, setShippingMethod] = useState("shipping");
+      const releaseProducts = categoriesData.categories.flatMap(category =>
+            category.products?.filter(product =>
+                product.new
+            ) || []
+        );
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -193,6 +200,16 @@ const CartPage = () => {
                         </Link>
                     </div>
                 </div>
+            </div>
+               <div>
+                <ProductCarousel products={releaseProducts} nameSection="You May be Intersting In...." slidesToShow = {{
+                    default: 4,
+                    xl: 4,
+                    lg: 4,
+                    md: 3,
+                    sm: 2,
+                    xs: 1
+                }} />
             </div>
         </div>
     );
