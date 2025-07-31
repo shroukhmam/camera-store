@@ -82,7 +82,7 @@ const ProductCard = ({ product }) => {
         <img
           src={Array.isArray(product.images) ? product.images[0] : product.images}
           alt={product.name}
-          className="w-full h-52 object-cover mx-auto rounded-lg shadow-md group-hover:shadow-xl transition-shadow duration-300"
+          className="w-full h-52 object-cover mx-auto duration-300"
         />
 
         {product.discount && (
@@ -111,7 +111,7 @@ const ProductCard = ({ product }) => {
           {/* Quick View Button */}
           <div className="relative group/quickview">
             <button className="bg-white p-3 w-full text-orange-500 hover:bg-orange-100 hover:scale-110 transform transition-transform duration-300">
-              <AiOutlineEye />
+              <Link to={`product/${product.id}`}><AiOutlineEye /></Link>
             </button>
             <span className="absolute right-full top-1/2 transform -translate-y-1/2 mr-1.5 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover/quickview:opacity-100 transition-opacity pointer-events-none z-20">
               Quick View

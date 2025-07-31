@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCarousel from "./ProductCarousel.jsx";
 import categoriesData from "../data/CategoryProduct.json";
+import {Link} from "react-router-dom";
 
 const Release = () => {
   if (!categoriesData?.categories) {
@@ -48,13 +49,21 @@ const Release = () => {
                   href="#"
                   className="inline-block px-6 py-3 bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg group-hover:shadow-orange-500/50"
               >
-                Explore More →
+                  <Link to={'/store'}> EXPLORE MORE →</Link>
+
               </a>
             </div>
           </div>
         </div>
         <div className="col-span-1 md:col-span-8  p-4">
-           <ProductCarousel products={releaseProducts} nameSection="New Release ..."/>
+           <ProductCarousel products={releaseProducts} nameSection="New Release ..."
+            slidesToShow={{
+             default: 3,
+             lg: 3,
+             md: 2,
+                sm: 2,
+                xs: 1
+           }} />
         </div>
       </div>
 

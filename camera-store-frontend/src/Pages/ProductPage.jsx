@@ -1,14 +1,28 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaCheck, FaShoppingCart, FaHeart, FaShare, FaExchangeAlt, FaTruck, FaStore } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
 import data from "../data/CategoryProduct.json";
+import ProductCard from "../components/ProductCard.jsx";
+import ProductCarousel from "../components/ProductCarousel.jsx";
+import categoriesData from "../data/CategoryProduct.json";
 
 export default function ProductPage() {
     const { id } = useParams();
     const productId = parseInt(id);
-    const [mainImage, setMainImage] = useState(0); // حالة لتتبع الصورة الرئيسية
+    const [mainImage, setMainImage] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+    const [selectedVariant, setSelectedVariant] = useState(null);
 
-    // البحث عن المنتج في جميع الفئات
+    const releaseProducts = categoriesData.categories.flatMap(category =>
+        category.products?.filter(product =>
+            product.new
+        ) || []
+    );
+    // استخدام الكارت كن텧סט
+    const { addToCart, setIsCartOpen } = useCart();
+
+    // البحث عن المنتج
     let product = null;
     for (const category of data.categories) {
         if (category.products) {
@@ -31,7 +45,7 @@ export default function ProductPage() {
         );
     }
 
-    // بيانات افتراضية للعرض (يمكن استبدالها ببيانات حقيقية من المنتج)
+    // بيانات المنتج
     const productDetails = {
         specifications: product.description ? product.description.split('. ') : [
             "32.5MP APS-C CMOS Sensor",
@@ -45,15 +59,31 @@ export default function ProductPage() {
             "EOS ITR AF, Electronic Shutter Function",
             "220,000-Pixel AE Metering Sensor"
         ],
-        soldCount: 2, // يمكن استبدالها ببيانات حقيقية
-        watchers: 32, // يمكن استبدالها ببيانات حقيقية
+        soldCount: 2,
+        watchers: 32,
         variants: [
             { id: 1, name: `${product.name} with X Clear`, price: "99,900 EGP" },
             { id: 2, name: `${product.name} with 18-55mm Lens`, price: "115,000 EGP" }
         ]
     };
 
-    // دالة لتغيير الصورة الرئيسية عند النقر على الصورة المصغرة
+    // دالة إضافة إلى السلة
+    const handleAddToCart = () => {
+        const productToAdd = {
+            id: selectedVariant ? `${product.id}-${selectedVariant.id}` : product.id,
+            name: selectedVariant ? selectedVariant.name : product.name,
+            price: parseFloat(product.price.replace(/[^0-9.]/g, '')) || 0,
+            image: product.images ? product.images[0] : "https://via.placeholder.com/600",
+            link: `/product/${product.id}`,
+            sku: product.sku || 'N/A',
+            selectedOption: selectedVariant ? selectedVariant.name : null,
+            quantity: quantity
+        };
+
+        addToCart(productToAdd);
+        setIsCartOpen(true);
+    };
+
     const handleThumbnailClick = (index) => {
         setMainImage(index);
     };
@@ -164,7 +194,13 @@ export default function ProductPage() {
                     {productDetails.variants && (
                         <div className="mb-6">
                             <label className="block font-medium mb-2">Connector:</label>
-                            <select className="w-full border rounded p-2">
+                            <select
+                                className="w-full border rounded p-2"
+                                onChange={(e) => setSelectedVariant(
+                                    productDetails.variants.find(v => v.id === parseInt(e.target.value))
+                                )}
+                            >
+                                <option value="">Select an option</option>
                                 {productDetails.variants.map((variant) => (
                                     <option key={variant.id} value={variant.id}>
                                         {variant.name} - {variant.price}
@@ -174,9 +210,41 @@ export default function ProductPage() {
                         </div>
                     )}
 
+                    {/* Quantity Selector */}
+                    <div className="mb-6">
+                        <label className="block font-medium mb-2">Quantity:</label>
+                        <div className="flex items-center">
+                            <button
+                                onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                                className="px-3 py-1 border rounded-l hover:bg-gray-100"
+                            >
+                                -
+                            </button>
+                            <input
+                                type="number"
+                                value={quantity}
+                                onChange={(e) => {
+                                    const value = parseInt(e.target.value);
+                                    setQuantity(isNaN(value) ? 1 : Math.max(1, value));
+                                }}
+                                className="w-16 text-center border-t border-b py-1"
+                                min="1"
+                            />
+                            <button
+                                onClick={() => setQuantity(q => q + 1)}
+                                className="px-3 py-1 border rounded-r hover:bg-gray-100"
+                            >
+                                +
+                            </button>
+                        </div>
+                    </div>
+
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-3 mb-6">
-                        <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg flex items-center justify-center font-medium transition">
+                        <button
+                            onClick={handleAddToCart}
+                            className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg flex items-center justify-center font-medium transition"
+                        >
                             <FaShoppingCart className="ml-2" />
                             Add To Cart
                         </button>
@@ -229,6 +297,16 @@ export default function ProductPage() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <ProductCarousel products={releaseProducts} nameSection="You May be Intersting In...." slidesToShow = {{
+                    default: 4,
+                    xl: 4,
+                    lg: 4,
+                    md: 3,
+                    sm: 2,
+                    xs: 1
+                }} />
             </div>
         </div>
     );

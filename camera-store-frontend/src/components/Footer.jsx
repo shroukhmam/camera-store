@@ -8,7 +8,7 @@ import categoriesData from  '../data/CategoryProduct.json';
 import {Link} from "react-router-dom";
 const Footer = () => {
   return (
-      <footer className="bg-gray-50 text-gray-800">
+      <footer className="bg-white w-[98%] mx-auto text-gray-800">
         <div className="container mx-auto px-4 py-10">
           {/* Locations Section */}
           <div className="flex flex-wrap border-b border-gray-200 pb-10 mb-10">

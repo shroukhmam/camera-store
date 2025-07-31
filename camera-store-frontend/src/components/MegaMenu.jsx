@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import menuData from "../data/megaMenu.json";
 import menuItems from "../data/menuItems.json";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const SIDEBAR_COLLAPSED = 64;
 const SIDEBAR_EXPANDED = 256;
 
@@ -77,26 +78,33 @@ export default function MegaMenu({ open, setOpen }) {
                                 {menuData.map((category) => (
                                     <React.Fragment key={category.id}>
                                         <li>
-                                            <button
+                                            <Link
+                                                to={`/category/${category.id}`}
                                                 className={`w-full text-left px-4 py-3 flex items-center justify-between text-[14px] font-medium 
-                          ${hoveredCategory === category.id
+                                                ${hoveredCategory === category.id
                                                     ? "bg-orange-100 text-orange-500"
-                                                    : "text-gray-700 hover:bg-gray-100"}`}
-                                                onClick={() => {
-                                                    setHoveredCategory(hoveredCategory === category.id ? null : category.id);
+                                                    : "text-gray-700 hover:bg-gray-100 hover:text-orange-500"}`}
+                                                onClick={closeMenu}
+                                                onMouseEnter={() => {
+                                                    setHoveredCategory(category.id);
+                                                }}
+                                                onMouseLeave={() => {
+                                                    setHoveredCategory(null);
                                                 }}
                                             >
                                                 <span>{category.name}</span>
-                                                <span
-                                                    className={`transition-transform duration-300 ${
-                                                        hoveredCategory === category.id
-                                                            ? "rotate-180 text-orange-500"
-                                                            : "text-gray-400"
-                                                    }`}
-                                                >
-                                                    ▼
-                                                </span>
-                                            </button>
+                                                {(category.subcategories?.length > 0 || category.brands?.length > 0) && (
+                                                    <span
+                                                        className={`transition-transform duration-300 ${
+                                                            hoveredCategory === category.id
+                                                                ? "rotate-180 text-orange-500"
+                                                                : "text-gray-400"
+                                                        }`}
+                                                    >
+                                                        ▼
+                                                    </span>
+                                                )}
+                                            </Link>
                                         </li>
 
                                         {hoveredCategory === category.id && (
@@ -105,16 +113,24 @@ export default function MegaMenu({ open, setOpen }) {
                                                 {category.subcategories?.map((subcategory) => (
                                                     <React.Fragment key={`subcategory-${subcategory.id}`}>
                                                         <li className="pl-8">
-                                                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700">
+                                                            <Link
+                                                                to={`/category/${subcategory.id}`}
+                                                                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700 hover:text-orange-500 block"
+                                                                onClick={closeMenu}
+                                                            >
                                                                 {subcategory.name}
-                                                            </button>
+                                                            </Link>
                                                         </li>
                                                         {/* Render brands under each subcategory */}
                                                         {subcategory.brands?.map((brand) => (
                                                             <li key={`subcategory-brand-${brand.id}`} className="pl-12">
-                                                                <button className="w-full text-left px-4 py-1 hover:bg-gray-100 text-[13px] text-gray-500">
+                                                                <Link
+                                                                    to={`/brand/${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                    className="w-full text-left px-4 py-1 hover:bg-gray-100 text-[13px] text-gray-500 hover:text-orange-500 block"
+                                                                    onClick={closeMenu}
+                                                                >
                                                                     {brand.name}
-                                                                </button>
+                                                                </Link>
                                                             </li>
                                                         ))}
                                                     </React.Fragment>
@@ -124,9 +140,13 @@ export default function MegaMenu({ open, setOpen }) {
                                                 {(!category.subcategories || category.subcategories.length === 0) &&
                                                     category.brands?.map((brand) => (
                                                         <li key={`brand-${brand.id}`} className="pl-8">
-                                                            <button className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700">
+                                                            <Link
+                                                                to={`/brand/${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                className="w-full text-left px-4 py-2 hover:bg-gray-100 text-[13px] font-medium text-gray-700 hover:text-orange-500 block"
+                                                                onClick={closeMenu}
+                                                            >
                                                                 {brand.name}
-                                                            </button>
+                                                            </Link>
                                                         </li>
                                                     ))
                                                 }
@@ -142,17 +162,16 @@ export default function MegaMenu({ open, setOpen }) {
                         <div className="p-4">
                             <ul className="space-y-3">
                                 {menuItems.map((item, index) => (
-                                    <li className="py-2">
-                                    <Link
-                                        key={index}
-                                        to={item.to}
-                                        className="pb-[2px] border-b-2 border-transparent hover:border-orange-300 transition duration-200 cursor-pointer"
-                                    >
-                                        {item.name}
-                                    </Link>
-                                        <hr/>
+                                    <li key={index} className="py-2">
+                                        <Link
+                                            to={item.to}
+                                            className="pb-[2px] border-b-2 border-transparent hover:border-orange-300 transition duration-200 cursor-pointer hover:text-orange-500"
+                                            onClick={closeMenu}
+                                        >
+                                            {item.name}
+                                        </Link>
+                                        <hr />
                                     </li>
-
                                 ))}
                             </ul>
                         </div>
@@ -201,9 +220,10 @@ export default function MegaMenu({ open, setOpen }) {
                             onMouseEnter={() => setHoveredCategory(category.id)}
                             onMouseLeave={() => setHoveredCategory(null)}
                         >
-                            <button
+                            <Link
+                                to={`/category/${category.id}`}
                                 className={`w-full text-left px-4 py-3 flex items-center gap-2 hover:bg-gray-100 text-[14px] font-normal
-                                    ${hoveredCategory === category.id ? "text-orange-500" : "text-gray-700"}`}
+                                    ${hoveredCategory === category.id ? "text-orange-500" : "text-gray-700 hover:text-orange-500"}`}
                             >
                                 {category.icon && (
                                     <img
@@ -217,7 +237,7 @@ export default function MegaMenu({ open, setOpen }) {
                                     />
                                 )}
                                 {open && <span>{category.name}</span>}
-                            </button>
+                            </Link>
 
                             {open && hoveredCategory === category.id && (
                                 <div
@@ -234,15 +254,23 @@ export default function MegaMenu({ open, setOpen }) {
                                                 <ul className="pl-2 text-[14px] font-normal text-gray-600">
                                                     {category.subcategories.map((subcategory) => (
                                                         <div key={subcategory.id} className="mb-3">
-                                                            <div className="font-medium text-gray-700 py-1">
+                                                            <Link
+                                                                to={`/category/${subcategory.id}`}
+                                                                className="font-medium text-gray-700 py-1 hover:text-orange-500 block"
+                                                            >
                                                                 {subcategory.name}
-                                                            </div>
+                                                            </Link>
                                                             {/* Render brands under each subcategory */}
                                                             {subcategory.brands?.length > 0 && (
                                                                 <ul className="pl-2">
                                                                     {subcategory.brands.map((brand) => (
-                                                                        <li key={brand.id} className="py-1 text-gray-500">
-                                                                            {brand.name}
+                                                                        <li key={brand.id} className="py-1">
+                                                                            <Link
+                                                                                to={`/brand/${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                                className="text-gray-500 hover:text-orange-500 block"
+                                                                            >
+                                                                                {brand.name}
+                                                                            </Link>
                                                                         </li>
                                                                     ))}
                                                                 </ul>
@@ -259,8 +287,13 @@ export default function MegaMenu({ open, setOpen }) {
                                                 <div className="mb-4">
                                                     <ul className="pl-2 text-[14px] font-normal text-gray-600">
                                                         {category.brands.map((brand) => (
-                                                            <li key={brand.id} className="font-medium text-gray-700 py-1">
-                                                                {brand.name}
+                                                            <li key={brand.id} className="py-1">
+                                                                <Link
+                                                                    to={`/brand/${brand.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                                                    className="font-medium text-gray-700 hover:text-orange-500 block"
+                                                                >
+                                                                    {brand.name}
+                                                                </Link>
                                                             </li>
                                                         ))}
                                                     </ul>

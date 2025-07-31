@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import {Link} from "react-router-dom";
 
 const Exclusives = () => {
   return (
@@ -421,7 +422,7 @@ const Slider3 = () => {
           boxShadow: '0 5px 20px 0 rgba(70, 29, 125, 0.5)'
         }}
       >
-        EXPLORE MORE
+        <Link to={'/store'}> EXPLORE MORE </Link>
       </a>
       
       {/* Progress bar */}
@@ -536,7 +537,8 @@ const Slider4 = () => {
             href={slides[currentSlide].ctaLink}
             className="inline-block bg-white text-red-600 font-bold text-xl px-12 py-4 rounded-md shadow-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
           >
-            EXPLORE MORE
+            <Link to={'/store'}> EXPLORE MORE </Link>
+
           </a>
         </div>
       </div>

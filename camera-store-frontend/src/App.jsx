@@ -37,7 +37,7 @@ function LayoutWrapper() {
                <>
                 <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="fixed top-4 left-4 z-50 text-black   py-1 rounded md:hidden"
+                className="absolute top-4 left-4 z-50 text-black   py-1 rounded md:hidden"
                 >
                 ☰
                </button>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import productsData from '../data/products.json';
+import {Link} from "react-router-dom";
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -62,7 +63,7 @@ const Slider = () => {
                   style={{ maxHeight: '280px' }}
                 />
                 <button className="absolute top-6 left-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-8 rounded-lg uppercase shadow-lg">
-                  Explore More
+                  <Link to={'/store'}> EXPLORE MORE </Link>
                 </button>
               </div>
             </div>
@@ -72,7 +73,7 @@ const Slider = () => {
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">SARAMONIC DEMO EVENT</h1>
               <p className="text-gray-300 text-lg mb-8">Hurry and get discounts on all Saramonic products</p>
               <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-10 rounded-lg shadow-lg transition-colors duration-300">
-                Go Shopping
+                <Link to={'/store'} > Go Shopping →</Link>
               </button>
             </div>
           </div>

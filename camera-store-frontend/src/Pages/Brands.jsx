@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import brandsData from '../data/brands.json';
+import {Link} from "react-router-dom";
 
 const Brands = () => {
   const [tooltip, setTooltip] = useState({ visible: false, name: '', x: 0, y: 0 });
@@ -29,17 +30,16 @@ const Brands = () => {
   };
 
   return (
-    <div className="w-full px-[120px] pt-3 pb-10 relative">
+
+      <div className="w-full bg-gray-100 px-[120px] pt-3 pb-10 relative">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-5">
         {brandsData.map((brand) => (
           <div
             key={brand.id}
             className="w-full h-[125px] flex items-center justify-center"
           >
-            <a
-              href={brand.link}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+                to={`${brand.name}`}
               className="block w-full h-full flex items-center justify-center"
               onMouseEnter={(e) => showTooltip(e, brand.name)} // بدء المؤقت عند الهوفر
               onMouseLeave={hideTooltip} // إخفاء الـ Tooltip وإلغاء المؤقت
@@ -54,7 +54,7 @@ const Brands = () => {
                   e.target.className = 'max-w-full max-h-full object-contain opacity-70';
                 }}
               />
-            </a>
+            </Link>
           </div>
         ))}
       </div>

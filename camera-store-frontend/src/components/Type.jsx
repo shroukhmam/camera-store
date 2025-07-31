@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import categoriesData from "../data/CategoryProduct.json";
 import ProductCard from "./ProductCard.jsx";
 import SideCart from "./SideCart.jsx";
+import {Link} from "react-router-dom";
 
 const Type = () => {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
@@ -9,6 +10,7 @@ const Type = () => {
   const [hoveredFirstCard, setHoveredFirstCard] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [currentFirstCardImageIndex, setCurrentFirstCardImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const products = categoriesData.categories.flatMap(category =>
       category.products?.filter(product =>
@@ -38,11 +40,15 @@ const Type = () => {
   };
 
   const nextFirstCardImage = () => {
+    setIsLoading(true);
     setCurrentFirstCardImageIndex((prev) => (prev + 1) % firstCardImages.length);
+    setTimeout(() => setIsLoading(false), 1000);
   };
 
   const prevFirstCardImage = () => {
+    setIsLoading(true);
     setCurrentFirstCardImageIndex((prev) => (prev - 1 + firstCardImages.length) % firstCardImages.length);
+    setTimeout(() => setIsLoading(false), 1000);
   };
 
   useEffect(() => {
@@ -53,168 +59,177 @@ const Type = () => {
   }, [showCartConfirm]);
 
   return (
-    <section className="max-w-[1440px] mx-auto px-4 py-12 font-sans">
-      <div className="flex flex-col lg:flex-row gap-8 items-start">
-        {/* LEFT SECTION */}
-        <div className="flex flex-col lg:flex-row w-full lg:w-3/4 gap-8 bg-white rounded-xl shadow-xl p-8 relative">
-          <div className="w-full lg:w-1/2 rounded-xl overflow-hidden relative group">
-            <img
-              src="https://camerashop.com.eg/wp-content/uploads/revslider/cinematic-wildlife-slider/africa-bg3-1.jpg"
-              alt="DJI Products"
-              className="w-full h-full min-h-[300px] object-cover rounded-lg"
-            />
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-700 group-hover:opacity-100 opacity-100 rounded-lg">
-              <div className="relative w-full h-full flex flex-col items-center justify-center">
-                <div className={`relative h-28 w-28 transform transition-all duration-1000 delay-100 ${isTextVisible ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'}`}>
-                  <img 
-                    src="https://camerashop.com.eg/wp-content/uploads/2025/03/1740037543_1874871.png" 
-                    alt="Product" 
-                    className="h-full w-full object-contain absolute top-0 left-0 animate-spin-slow hover:animate-pulse" 
-                  />
+      <section className="max-w-[1440px] mx-auto px-4 py-12 font-sans">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
+          {/* LEFT SECTION */}
+          <div className="w-full lg:w-3/4 flex flex-col gap-8">
+            {/* Main Content */}
+            <div className="flex flex-col lg:flex-row gap-8 bg-white rounded-xl shadow-xl p-8 relative">
+              <div className="w-full lg:w-1/2 rounded-xl overflow-hidden relative group">
+                <img
+                    src="https://camerashop.com.eg/wp-content/uploads/revslider/cinematic-wildlife-slider/africa-bg3-1.jpg"
+                    alt="DJI Products"
+                    className="w-full h-full min-h-[300px] object-cover rounded-lg"
+                />
+                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4 transition-opacity duration-700 group-hover:opacity-100 opacity-100 rounded-lg">
+                  <div className="relative w-full h-full flex flex-col items-center justify-center">
+                    <div className={`relative h-28 w-28 transform transition-all duration-1000 delay-100 ${isTextVisible ? 'translate-y-0 opacity-100' : '-translate-y-8 opacity-0'}`}>
+                      <img
+                          src="https://camerashop.com.eg/wp-content/uploads/2025/03/1740037543_1874871.png"
+                          alt="Product"
+                          className="h-full w-full object-contain absolute top-0 left-0 animate-spin-slow hover:animate-pulse"
+                      />
+                    </div>
+                    <div className={`absolute inset-0 flex flex-col items-center justify-center text-white space-y-4 transform transition-all duration-1000 ${isTextVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+                      <h2 className="text-3xl md:text-4xl font-bold leading-snug drop-shadow-lg">
+                        Capture Your<br />Next Adventure
+                      </h2>
+                      <p className="text-base md:text-lg drop-shadow-md">
+                        Discover high-quality DJI gear to level up your shooting experience.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className={`absolute inset-0 flex flex-col items-center justify-center text-white space-y-4 transform transition-all duration-1000 ${isTextVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-                  <h2 className="text-3xl md:text-4xl font-bold leading-snug drop-shadow-lg">
-                    Capture Your<br />Next Adventure
-                  </h2>
-                  <p className="text-base md:text-lg drop-shadow-md">
-                    Discover high-quality DJI gear to level up your shooting experience.
-                  </p>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex flex-col justify-center p-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">DJI Products</h1>
+                <p className="text-gray-600 text-lg mb-6">
+                  Make your setup different with DJI with our full RANGE solutions
+                </p>
+                <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 w-fit text-lg hover:shadow-xl hover:-translate-y-1">
+                 <Link to={'/store'} > Go Shopping →</Link>
+                </button>
+              </div>
+            </div>
+
+            {/* Images Gallery Below Left Section */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 - مع سهمي التنقل */}
+              <div
+                  className="relative group overflow-hidden rounded-xl h-80"
+                  onMouseEnter={() => setHoveredFirstCard(true)}
+                  onMouseLeave={() => setHoveredFirstCard(false)}
+              >
+                {isLoading && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 z-20">
+                      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
+                    </div>
+                )}
+                <img
+                    src={firstCardImages[currentFirstCardImageIndex]}
+                    alt="Professional Camera"
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${isLoading ? 'opacity-70' : 'opacity-100'}`}
+                />
+                {hoveredFirstCard && (
+                    <div className="absolute inset-0 flex items-center justify-between px-2 z-10">
+                      <button
+                          className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            prevFirstCardImage();
+                          }}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </button>
+                      <button
+                          className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            nextFirstCardImage();
+                          }}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </button>
+                    </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white font-bold text-xl mb-1">Professional Cameras</h3>
+                  <p className="text-gray-300 text-sm mb-3">High-end photography equipment</p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-orange-400 font-bold text-2xl">9,500 EGP</p>
+                    {/*<button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">*/}
+                    {/*  Add to Cart*/}
+                    {/*</button>*/}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="relative group overflow-hidden rounded-xl h-80">
+                <img
+                    src="https://camerashop.com.eg/wp-content/uploads/2025/03/gk-panel-700b-bi-color-light-panel-866084-1.png"
+                    alt="GK Panel 700B"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white font-bold text-xl mb-1">GK Panel 700B</h3>
+                  <p className="text-gray-300 text-sm mb-3">Bi-color LED Light Panel</p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-orange-400 font-bold text-2xl">12,000 EGP</p>
+                    {/*<button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">*/}
+                    {/*  Add to Cart*/}
+                    {/*</button>*/}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="relative group overflow-hidden rounded-xl h-80">
+                <img
+                    src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39"
+                    alt="Camera and Audio Gear"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
+                  <h3 className="text-white font-bold text-xl mb-1">Camera & Audio</h3>
+                  <p className="text-gray-300 text-sm mb-3">Professional Recording Kit</p>
+                  <div className="flex justify-between items-center">
+                    <p className="text-orange-400 font-bold text-2xl">15,000 EGP</p>
+                    {/*<button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">*/}
+                    {/*  Add to Cart*/}
+                    {/*</button>*/}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col justify-center p-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">DJI Products</h1>
-            <p className="text-gray-600 text-lg mb-6">
-              Make your setup different with DJI with our full RANGE solutions
-            </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 w-fit text-lg hover:shadow-xl hover:-translate-y-1">
-              Go Shopping →
-            </button>
-          </div>
-        </div>
-
-        {/* RIGHT CARD */}
-
-          <div className="relative">
+          {/* RIGHT CARD */}
+          <div className="relative w-full lg:w-1/4">
             <div className="absolute w-full inset-0 flex items-center justify-between px-2 z-10">
-            <button
-                className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevProduct();
-                }}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button
-                className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextProduct();
-                }}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
-            </button>
-          </div>
-               <ProductCard product={products[currentProductIndex]} />
-               <SideCart />
-          </div>
-      </div>
-
-      {/* ADDITIONAL CARDS */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        {/* Card 1 - مع سهمي التنقل */}
-        <div 
-          className="relative group overflow-hidden rounded-xl h-80"
-          onMouseEnter={() => setHoveredFirstCard(true)}
-          onMouseLeave={() => setHoveredFirstCard(false)}
-        >
-          <img
-            src={firstCardImages[currentFirstCardImageIndex]}
-            alt="Professional Camera"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          {hoveredFirstCard && (
-            <div className="absolute inset-0 flex items-center justify-between px-2 z-10">
-              <button 
-                className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevFirstCardImage();
-                }}
+              <button
+                  className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevProduct();
+                  }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
                 </svg>
               </button>
-              <button 
-                className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextFirstCardImage();
-                }}
+              <button
+                  className="bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition hover:scale-110"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextProduct();
+                  }}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                 </svg>
               </button>
             </div>
-          )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-xl mb-1">Professional Cameras</h3>
-            <p className="text-gray-300 text-sm mb-3">High-end photography equipment</p>
-            <div className="flex justify-between items-center">
-              <p className="text-orange-400 font-bold text-2xl">9,500 EGP</p>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
-                Add to Cart
-              </button>
-            </div>
+            <ProductCard product={products[currentProductIndex]} />
+            <SideCart />
           </div>
         </div>
-
-        <div className="relative group overflow-hidden rounded-xl h-80">
-          <img
-            src="https://camerashop.com.eg/wp-content/uploads/2025/03/gk-panel-700b-bi-color-light-panel-866084-1.png"
-            alt="GK Panel 700B"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-xl mb-1">GK Panel 700B</h3>
-            <p className="text-gray-300 text-sm mb-3">Bi-color LED Light Panel</p>
-            <div className="flex justify-between items-center">
-              <p className="text-orange-400 font-bold text-2xl">12,000 EGP</p>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative group overflow-hidden rounded-xl h-80">
-          <img
-            src="https://images.unsplash.com/photo-1512790182412-b19e6d62bc39"
-            alt="Camera and Audio Gear"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-xl mb-1">Camera & Audio</h3>
-            <p className="text-gray-300 text-sm mb-3">Professional Recording Kit</p>
-            <div className="flex justify-between items-center">
-              <p className="text-orange-400 font-bold text-2xl">15,000 EGP</p>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
   );
 };
 

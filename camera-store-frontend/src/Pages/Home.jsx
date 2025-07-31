@@ -31,7 +31,7 @@ export default function Home({ onAddToCart }) {
     const stabilizerProducts = stabilizerCategory?.products || [];
 
     return (
-        <>
+        <div className="bg-gray-100">
             <DJIOfferBanner />
             <BrandsCarousel items={brandsData} />
             <CategoryCarousel />
@@ -39,9 +39,8 @@ export default function Home({ onAddToCart }) {
             <Slider />
             <ProductCarousel products={lightProducts} nameSection="Lights......" onAddToCart={onAddToCart} />
             <Type />
-            <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
             <Release />
-
-        </>
+             <ProductCarousel products={stabilizerProducts} nameSection="Stabilizer......" onAddToCart={onAddToCart} />
+        </div>
     );
 }
