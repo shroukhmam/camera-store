@@ -7,6 +7,8 @@ import { useState } from "react";
 import Home from "./Pages/Home.jsx";
 import ProductPage from "./Pages/ProductPage.jsx";
 import { CartProvider } from "./context/CartContext";
+import { CompareProvider } from "./context/CompareContext";
+import ComparePage from "./Pages/ComparePage.jsx";
 import AccountPage from "./Pages/AccountPage.jsx";
 import ForgetPassword from "./Pages/ForgetPassword.jsx";
 import Contact from "./Pages/Contact.jsx";
@@ -20,6 +22,7 @@ import CheckoutPage from "./Pages/CheckoutPage.jsx";
 import Store from "./Pages/Store.jsx";
 import CategoryPage from "./Pages/CategoryPage.jsx";
 import BrandPage from "./Pages/BrandPage.jsx";
+import WishlistPage from "./Pages/WishlistPage.jsx";
 // ✅ ملف داخل App لحساب موقعك الحالي
 function LayoutWrapper() {
     const location = useLocation();
@@ -62,7 +65,8 @@ function LayoutWrapper() {
                     <Route path="/checkout" element={<CheckoutPage />} />
                     <Route path="/category/:id" element={<CategoryPage />} />
                     <Route path="/brand/:name" element={<BrandPage />} />
-
+                    <Route path="/wishlist" element={<WishlistPage />} />
+                    <Route path="/compare" element={<ComparePage />} />
                 </Routes>
 
                 {!isBrandsPage && <Footer />}
@@ -75,7 +79,9 @@ function App() {
     return (
         <BrowserRouter>
             <CartProvider>
-                <LayoutWrapper />
+                <CompareProvider>
+                    <LayoutWrapper />
+                </CompareProvider>
             </CartProvider>
         </BrowserRouter>
     );

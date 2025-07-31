@@ -1,11 +1,16 @@
 import { FaShoppingCart, FaUser, FaSyncAlt, FaHeart } from "react-icons/fa";
+import { MdCompareArrows } from "react-icons/md";
 import { Link } from "react-router-dom";
 import menuItems from "../data/menuItems.json";
 import { useCart } from "../context/CartContext.jsx";
+import { useWishlist } from "../context/WishlistContext.jsx";
+import { useCompare } from "../context/CompareContext.jsx";
 import SideCart from "./SideCart.jsx";
 
 const SubNavbar = () => {
   const { cartItems, isCartOpen, setIsCartOpen } = useCart();
+  const { wishlistItems } = useWishlist();
+  const { compareItems } = useCompare();
 
   // Calculate total quantity and total price
   const totalQuantity = cartItems?.reduce((total, item) => total + (item.quantity || 0), 0) || 0;
@@ -14,6 +19,10 @@ const SubNavbar = () => {
     const quantity = item.quantity || 0;
     return total + (price * quantity);
   }, 0) || 0;
+
+  const wishlistCount = wishlistItems.length;
+  const compareCount = compareItems.length;
+
   return (
       <div className="hidden md:flex w-full bg-orange-500 text-white px-4 py-3 flex-col md:flex-row justify-between items-center gap-4 md:gap-6">
         {/* Empty space for alignment */}
@@ -47,18 +56,23 @@ const SubNavbar = () => {
           </div>
 
           <div className="relative cursor-pointer">
-            <FaSyncAlt />
-            <span className="absolute -top-2 -right-2 bg-white text-orange-600 rounded-full text-xs px-1">
-            0
-          </span>
+            <Link to="/wishlist" className="flex items-center">
+              <FaHeart />
+              <span className="absolute -top-2 -right-2 bg-white text-orange-600 rounded-full text-xs px-1">
+                {wishlistCount}
+              </span>
+            </Link>
           </div>
 
           <div className="relative cursor-pointer">
-            <FaHeart />
-            <span className="absolute -top-2 -right-2 bg-white text-orange-600 rounded-full text-xs px-1">
-            1
-          </span>
+            <Link to="/compare" className="flex items-center">
+              <MdCompareArrows />
+              <span className="absolute -top-2 -right-2 bg-white text-orange-600 rounded-full text-xs px-1">
+                {compareCount}
+              </span>
+            </Link>
           </div>
+
           <div
               className="relative flex items-center gap-1 cursor-pointer"
               onClick={() => setIsCartOpen(!isCartOpen)}
